@@ -4,7 +4,6 @@ import router from './router'
 import './plugins/element.js'
 import './assets/css/reset.css'
 import api from './api/index'
-import './script/get_news.js'
 Vue.prototype.$api = api;
 Vue.config.productionTip = false
 new Vue({

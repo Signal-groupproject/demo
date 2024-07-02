@@ -4,22 +4,22 @@
 import base from './base'
 import axios from 'axios'
 
-const api ={
+const api = {
     /**
      * 轮播接口
      */
-    getBanner(){
+    getBanner() {
         return axios.get(base.host + base.bannerUrl)
     },
     /**
      * 获取蓝莓酱 blueBerryjam_id
      */
-    getLanmei(params){//{}
-        return axios.get(base.host + base.lanmei,{
+    getLanmei(params) {//{}
+        return axios.get(base.host + base.lanmei, {
             params
         })
     },
-    getNews(){
+    getNews() {
         return axios.get(base.news)
     }
 }
