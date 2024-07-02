@@ -3,8 +3,8 @@
     <!-- 1. 轮播图 -->
     <Banner :banner="banner" />
 
-    <!-- 2. 蓝莓酱 -->
-    <Lanmei :list="list" />
+<!--    &lt;!&ndash; 2. 蓝莓酱 &ndash;&gt;-->
+<!--    <Lanmei :list="list" />-->
 
     <!-- 3. 分页 -->
     <MyPagination :total="total" :pageSize="pageSize" @getPage="getPage" />
