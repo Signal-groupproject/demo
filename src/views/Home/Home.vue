@@ -1,10 +1,10 @@
 <template>
 
   <div class="home">
-    <head>
-      <!-- Other head elements -->
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
-    </head>
+<!--    <head>-->
+<!--      &lt;!&ndash; Other head elements &ndash;&gt;-->
+<!--      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />-->
+<!--    </head>-->
 
     <!-- 1. 轮播图 -->
     <Banner :banner="banner" />
@@ -12,6 +12,17 @@
     <!-- 欢迎部分 -->
     <section class="welcome-section">
       <h1>WELCOME <span>TO</span> NEWMAN</h1>
+
+      <!-- 地图加载-->
+      <div style="text-align: center;">
+        <el-button type="success" @click="fetchImage">Map</el-button>
+
+        <div v-if="showOverlay" class="overlay">
+        <el-button class="close-button" @click="closeOverlay">X</el-button>
+        <img :src="imageUrl" alt="Map Image" class="image">
+        </div>
+      </div>
+
       <p>纽曼公司创立于1996年，现有员工2000余人，是一家集研发、制造、销售、服务为一体的中国高新技术企业。公司研发及生产体系健全，拥有湖南、北京和深圳三大中心。经过17年的发展，凭借强大的研发力量及资源整合能力，纽曼已拥有目前中国数码行业较为完整产品体系。产品跨越专业及消费数码产品领域。</p>
     </section>
 
@@ -108,7 +119,9 @@ export default {
         'FAQ项2': 'FAQ项2的答案',
         'FAQ项3': 'FAQ项3的答案'
       },
-      selectedAnswer: ''
+      selectedAnswer: '',
+      showOverlay: false,
+      imageUrl: ''
     };
   },
   created() {
@@ -135,6 +148,28 @@ export default {
     showAnswer(question) {
       const answer = this.faqAnswers[question];
       this.$router.push({ name: 'answer', params: { question, answer } });
+    },
+    async fetchImage() {
+      if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(this.getPositionSuccess, this.getPositionError);
+      } else {
+        alert("Geolocation is not supported by this browser.");
+      }
+    },
+    async getPositionSuccess(position) {
+      const latitude = position.coords.latitude;
+      const longitude = position.coords.longitude;
+      const get_imageUrl=`https://restapi.amap.com/v3/staticmap?location=${longitude},${latitude}&zoom=10&size=750*500&markers=mid,,A:${longitude},${latitude}&scale=2&key=49495b005f7739d2efd37cc043057791`;
+       // 直接将图片URL赋值给imageUrl
+      this.imageUrl = get_imageUrl;
+      this.showOverlay = true; // 显示悬浮层
+    },
+    getPositionError(error) {
+      console.error('无法获取位置信息:', error);
+      alert("无法获取位置信息，请确保位置服务已启用。");
+    },
+    closeOverlay() {
+      this.showOverlay = false; // 关闭悬浮层
     }
   },
 };
@@ -142,7 +177,29 @@ export default {
 
 <style>
 /* 其他样式 */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
 
+.image {
+  max-width: 80%;
+  max-height: 80%;
+}
+
+.close-button {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
 
 
 .welcome-section {
