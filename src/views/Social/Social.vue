@@ -1,5 +1,5 @@
 <template>
-  <div class="about">
+  <div class="social">
     <!-- 搜索框区域 -->
     <div class="search-container" :style="{ 'background-image': 'url(' + backgroundImage + ')' }">
       <el-input v-model="searchQuery" placeholder="搜索你想去的地名或群号" class="search-input"></el-input>
@@ -7,7 +7,7 @@
     </div>
 
     <!-- 搜索结果显示 -->
-    <div v-if="searchResults.length" class="search-results">
+    <div v-if="searchClicked && searchResults.length" class="search-results">
       <p v-for="result in searchResults" :key="result" class="result-item">
         {{ result }}
       </p>
@@ -27,7 +27,7 @@
 
     <!-- 底部网站信息 -->
     <footer class="footer">
-      <p>网站信息：这里是您的网站信息内容，可以根据需要自行修改。</p>
+      <p>青春没有售价，疯狂就在当下，爱着这炙热的青春。</p>
     </footer>
   </div>
 </template>
@@ -39,7 +39,6 @@ export default {
     return {
       searchQuery: '',
       searchResults: [],
-      components: ['首页', '新闻', '攻略群', '旅游'], // 假设的组件名称列表
       backgroundImage: require('@/pictures/page1/about_top.jpg'), // 背景图片路径
       images: [
         { src: require('@/pictures/page1/about_top.jpg'), info: '群号：123456', topLeftInfo: '图1信息' },
@@ -52,7 +51,8 @@ export default {
         { src: require('@/pictures/page1/about_top.jpg'), info: '群号：890123', topLeftInfo: '图8信息' },
         { src: require('@/pictures/page1/about_top.jpg'), info: '群号：901234', topLeftInfo: '图9信息' }
       ],
-      infoIndex: -1
+      infoIndex: -1,
+      searchClicked: false // 标记搜索按钮是否点击过
     };
   },
   computed: {
@@ -72,6 +72,7 @@ export default {
       this.searchResults = this.components.filter(component =>
           component.includes(this.searchQuery)
       );
+      this.searchClicked = true; // 设置搜索按钮点击状态为true
     },
     showInfo(index) {
       this.infoIndex = index;
@@ -177,5 +178,16 @@ export default {
   padding: 20px;
   text-align: center;
   margin-top: 20px;
+  color:#f0f0f0;
 }
+
+.footer p {
+  position: relative; /* 相对定位 */
+  z-index: 2; /* 提升文字层级，使其位于背景上方 */
+  margin: 0; /* 去除段落的默认外边距 */
+  color: #333; /* 设置文字颜色 */
+  font-size: 16px; /* 设置文字大小 */
+  font-weight: bold; /* 设置文字粗细 */
+}
+
 </style>

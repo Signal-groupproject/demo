@@ -6,7 +6,7 @@ import axios from 'axios'
 
 const api = {
     /**
-     * 轮播接口
+     * 轮播接口1
      */
     getBanner() {
         return axios.get(base.host + base.bannerUrl)
@@ -21,6 +21,9 @@ const api = {
     },
     getNews() {
         return axios.get(base.news)
+    },
+    getLoop() {
+        return axios.get(base.loop)
     }
 }
 

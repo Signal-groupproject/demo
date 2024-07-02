@@ -10,8 +10,8 @@
     >
       <el-menu-item index="/">首页</el-menu-item>
       <el-menu-item index="/news">新闻</el-menu-item>
-      <el-menu-item index="/about">攻略群</el-menu-item>
-      <el-menu-item index="/travel">旅游</el-menu-item>
+      <el-menu-item index="/social">攻略群</el-menu-item>
+      <el-menu-item index="/travel">热门旅游</el-menu-item>
     </el-menu>
   </div>
 </template>
