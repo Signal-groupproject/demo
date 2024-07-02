@@ -19,6 +19,9 @@ const api ={
             params
         })
     },
+    getNews(){
+        return axios.get(base.news)
+    }
 }
 
 
