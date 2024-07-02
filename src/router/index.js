@@ -2,6 +2,7 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '../views/Home/Home.vue'
 import Layout from '../views/Layout.vue'
+import AnswerPage from "@/views/Home/buttom/AnswerPage.vue";
 Vue.use(VueRouter)
 
 const routes = [
@@ -28,8 +29,15 @@ const routes = [
         path: '/travel',
         name: 'Travel',
         component: () => import('../views/Travel/Travel.vue'),
-      }
+      },
+      {
+        path: '/answer/:question/:answer',
+        name: 'answer',
+        component: AnswerPage,
+      },
+
     ]
+
   }
 
 ]

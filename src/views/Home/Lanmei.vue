@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-      <h2 class="title">蓝莓酱</h2>
+      <h2 class="title">热门景点</h2>
       <ul class="list">
           <li v-for="(item,index) in list" :key='index'>
               <div class="item">
