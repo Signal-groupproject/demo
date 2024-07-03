@@ -32,23 +32,23 @@ const routes = [
         component: Home,
       },
       {
-        path: '/social',
-        name: 'Social',
-        component: () => import('../views/Social/Social.vue'),
-      },
-      {
         path: '/news',
         name: 'News',
-        component: () => import('../views/News/News.vue'),
+        component: () => import('../views/Tools/News.vue'),
+      },
+      {
+        path: '/map',
+        name: 'Maps',
+        component: () => import('../views/Tools/Map.vue'),
       },
       {
         path: '/travel',
-        name: 'Travel',
+        name: 'Attractions',
         component: () => import('../views/Travel/Attractions.vue'),
       },
       {
         path: '/travel',
-        name: 'Travel',
+        name: 'Food',
         component: () => import('../views/Travel/Food.vue'),
       },
       {

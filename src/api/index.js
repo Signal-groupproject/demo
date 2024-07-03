@@ -11,16 +11,11 @@ const api = {
     getBanner() {
         return axios.get(base.host + base.bannerUrl)
     },
-    /**
-     * 获取蓝莓酱 blueBerryjam_id
-     */
-    getLanmei(params) {//{}
-        return axios.get(base.host + base.lanmei, {
-            params
-        })
-    },
     getNews() {
         return axios.get(base.news)
+    },
+    getRandomImage(){
+        return axios.get(base.randomImage)
     }
 }
 

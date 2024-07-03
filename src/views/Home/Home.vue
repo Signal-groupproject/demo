@@ -1,11 +1,6 @@
 <template>
 
   <div class="home">
-    <head>
-      <!-- Other head elements -->
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
-    </head>
-
     <!-- 1. 轮播图 -->
     <Banner :banner="banner" />
 
@@ -115,18 +110,13 @@
 
 <script>
 import Banner from "./Banner.vue";
-import Lanmei from "./Lanmei.vue";
-// import AnswerPage from "@/views/bottom/AnswerPage.vue";
-import MyPagination from "../../components/MyPagination.vue";
+import AnswerPage from "@/views/bottom/AnswerPage.vue";
 
 export default {
   name: "Home",
   components: {
     Banner,
-    Lanmei,
-    // AnswerPage,
-    MyPagination,
-
+    AnswerPage,
   },
   data() {
     return {

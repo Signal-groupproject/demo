@@ -9,7 +9,13 @@
       router
     >
       <el-menu-item index="/">首页</el-menu-item>
-      <el-menu-item index="/news">新闻</el-menu-item>
+      <el-submenu index="/tools">
+        <template #title>
+          <span>工具</span>
+        </template>
+        <el-menu-item index="/news">文旅新闻</el-menu-item>
+        <el-menu-item index="/map">地图搜索</el-menu-item>
+      </el-submenu>
 
       <el-submenu index="/guide">
         <template #title>
@@ -20,7 +26,9 @@
       </el-submenu>
 
       <el-submenu index="/travel">
-        <template slot="title">热门旅游</template>
+        <template #title>
+          <span>热门旅游</span>
+        </template>
         <el-menu-item index="/travel/attractions">热门景点</el-menu-item>
         <el-menu-item index="/travel/food">美食介绍</el-menu-item>
       </el-submenu>
@@ -53,3 +61,5 @@
   }
 }
 </style>
+<script setup lang="ts">
+</script>
