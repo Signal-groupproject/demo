@@ -4,6 +4,7 @@ import Home from '../views/Home/Home.vue'
 import Layout from '../views/Layout.vue'
 import AnswerPage from '../views/bottom/AnswerPage.vue'
 import QandA from '../views/bottom/QandA.vue'
+import Advice from '../views/bottom/Advice.vue';
 Vue.use(VueRouter)
 
 const routes = [
@@ -40,6 +41,11 @@ const routes = [
         path: '/QandA',
         name: 'QandA',
         component: QandA,
+      },
+      {
+        path: '/Advice',
+        name: 'Advice',
+        component: Advice,
       }
 
     ]

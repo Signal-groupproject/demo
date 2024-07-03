@@ -70,9 +70,9 @@
         <div class="footer-column-center">
           <h3>旅游FAQ</h3>
           <ul>
-            <li @click="showAnswer('FAQ项1')">FAQ项1</li>
-            <li @click="showAnswer('FAQ项2')">FAQ项2</li>
-            <li @click="showAnswer('FAQ项3')">FAQ项3</li>
+            <li @click="showAnswer('FAQ1')">FAQ1</li>
+            <li @click="showAnswer('FAQ2')">FAQ2</li>
+            <li @click="showAnswer('FAQ3')">FAQ3</li>
           </ul>
         </div>
 
@@ -83,8 +83,9 @@
           <h3>服务优化</h3>
           <ul>
             <li @click="showQandA('问题解答')">问题解答</li>
-            <li><a href="#">意见</a></li>
-            <li><a href="#">问卷调查</a></li>
+            <li @click="showAdvice('意见')">意见</li>
+            <li @click="show('')"></li>
+<!--            <li><a href="#">问卷调查</a></li>-->
           </ul>
         </div>
 
@@ -101,7 +102,7 @@
 <script>
 import Banner from "./Banner.vue";
 import Lanmei from "./Lanmei.vue";
-import AnswerPage from "@/views/bottom/AnswerPage.vue";
+// import AnswerPage from "@/views/bottom/AnswerPage.vue";
 import MyPagination from "../../components/MyPagination.vue";
 
 export default {
@@ -109,7 +110,7 @@ export default {
   components: {
     Banner,
     Lanmei,
-    AnswerPage,
+    // AnswerPage,
     MyPagination,
 
   },
@@ -155,12 +156,12 @@ export default {
 
 
 
-      faqAnswers: {
-        'FAQ项1': 'FAQ项1的答案',
-        'FAQ项2': 'FAQ项2的答案',
-        'FAQ项3': 'FAQ项3的答案'
-      },
-      selectedAnswer: '',
+      // faqAnswers: {
+      //   'FAQ项1': 'FAQ项1的答案',
+      //   'FAQ项2': 'FAQ项2的答案',
+      //   'FAQ项3': 'FAQ项3的答案'
+      // },
+      // selectedAnswer: '',
 
     };
   },
@@ -201,13 +202,16 @@ export default {
 
 
     showAnswer(question) {
-      const answer = this.faqAnswers[question];
-      this.$router.push({ name: 'AnswerPage', params: { question, answer } });
+      this.$router.push({ name: 'AnswerPage', params: { question } });
     },
 
     showQandA(qAndA) {
       // 使用路由导航打开新界面
       this.$router.push({ name: 'QandA', params: { qAndA } });
+    },
+
+    showAdvice(advice){
+      this.$router.push({ name: 'Advice', params: { advice } });
     }
 
 
