@@ -24,23 +24,44 @@
       </div>
     </section>
 
-    <!-- 2. 热门旅游景点展示 -->
-    <!--    <Lanmei :list="list" />-->
+    <!--  推荐网页 -->
 
-    <!--    &lt;!&ndash;  推荐网页 &ndash;&gt;-->
-    <!--    <section class="recommend-websites">-->
-    <!--      <h2>推荐网页</h2>-->
-    <!--      <div class="website-list">-->
-    <!--        <div class="website" v-for="website in recommendWebsites" :key="website.title">-->
-    <!--          <img :src="website.image" alt="网页图片" @mouseover="showLinks(website)" @mouseleave="hideLinks" />-->
-    <!--          <div class="link-container" v-show="showLinksFlag && currentWebsite === website">-->
-    <!--            <div class="link" v-for="link in website.links" :key="link.title">-->
-    <!--              <a :href="link.url" target="_blank">{{ link.title }}</a>-->
-    <!--            </div>-->
-    <!--          </div>-->
-    <!--        </div>-->
-    <!--      </div>-->
-    <!--    </section>-->
+    <section class="Content-Recommendation">
+      <h1>魅力中国</h1>
+      <div class="intro-container">
+
+        <div class="image-grid">
+          <div v-for="(image, index) in images" :key="index" class="image-item">
+            <div class="image-container" @mouseenter="showOptions(index)" @mouseleave="hideOptions()">
+              <img :src="image.src" alt="图片">
+
+              <div class="image-caption">
+                <h2 class="image-title">{{image.title}}</h2>
+                <p class="image-description">{{ image.description }}</p>
+              </div>
+
+              <div class="options" v-if="showOptionsIndex === index">
+                <ul>
+                  <li v-for="(option, optionIndex) in image.options" :key="optionIndex" @click="handleOptionClick(option)">
+                    {{ option.label }}
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+
+
+
+
+
+
+
 
     <!--  底栏 -->
     <div class="footer">
@@ -85,16 +106,15 @@
           </ul>
         </div>
 
-        <!-- 答案展示界面 -->
-        <!--        <router-view></router-view>-->
+
 
         <div class="footer-column-right">
           <h3>服务优化</h3>
           <ul>
             <li @click="showQandA('问题解答')">问题解答</li>
-            <li @click="showAdvice('意见')">意见</li>
-            <li @click="show('')"></li>
-            <!--            <li><a href="#">问卷调查</a></li>-->
+            <li @click="showAdvice('游客意见')">游客意见</li>
+            <li @click="improveExperience('优化体验')">优化体验</li>
+
           </ul>
         </div>
 
@@ -125,47 +145,37 @@ export default {
       total: 100,
       pageSize: 10,
 
-
-      // recommendWebsites: [
-      //   {
-      //     title: '推荐网页1',
-      //     image: 'https://example.com/image1.jpg',
-      //     links: [
-      //       { title: '链接1', url: 'https://example.com/link1' },
-      //       { title: '链接2', url: 'https://example.com/link2' },
-      //       { title: '链接3', url: 'https://example.com/link3' },
-      //     ],
-      //   },
-      //   {
-      //     title: '推荐网页2',
-      //     image: 'https://example.com/image2.jpg',
-      //     links: [
-      //       { title: '链接4', url: 'https://example.com/link4' },
-      //       { title: '链接5', url: 'https://example.com/link5' },
-      //       { title: '链接6', url: 'https://example.com/link6' },
-      //     ],
-      //   },
-      //   {
-      //     title: '推荐网页3',
-      //     image: 'https://example.com/image3.jpg',
-      //     links: [
-      //       { title: '链接7', url: 'https://example.com/link7' },
-      //       { title: '链接8', url: 'https://example.com/link8' },
-      //       { title: '链接9', url: 'https://example.com/link9' },
-      //     ],
-      //   },
-      // ],
-      // showLinksFlag: false,
-      // currentWebsite: null,
+      images: [
+        {
+          src: require('./image/喀拉峻草原.png'),
+          title: '自然',
+          description: 'lllllll',
+          options: [
+            { label: '自然景观类别', value: 'option1' },
+            { label: '游玩方式', value: 'option2' },
+            { label: '发展前景', value: 'option3' }
+          ]
+        },
+        {
+          src: require('./image/古格王国遗址.png'),
+          options: [
+            { label: '文化遗产盘点', value: 'option4' },
+            { label: '游玩方式', value: 'option5' },
+            { label: '发展前景', value: 'option6' }
+          ]
+        },
+        {
+          src: require('@/views/Home/image/中国美食地图.png'),
+          options: [
+            { label: '中国饮食菜系', value: 'option7' },
+            { label: '必吃美食', value: 'option8' },
+            { label: '发展前景', value: 'option9' }
+          ]
+        }
+      ],
+      showOptionsIndex: -1
 
 
-
-      // faqAnswers: {
-      //   'FAQ项1': 'FAQ项1的答案',
-      //   'FAQ项2': 'FAQ项2的答案',
-      //   'FAQ项3': 'FAQ项3的答案'
-      // },
-      // selectedAnswer: '',
 
     };
   },
@@ -184,24 +194,52 @@ export default {
       this.banner = banner;
     });
 
-    // 蓝莓酱数据---------
-    // this.getHttp(1);
 
-    //
   },
 
 
   methods: {
     // 其他方法
 
-    // showLinks(website) {
-    //   this.showLinksFlag = true;
-    //   this.currentWebsite = website;
-    // },
-    // hideLinks() {
-    //   this.showLinksFlag = false;
-    //   this.currentWebsite = null;
-    // },
+    showOptions(index) {
+      this.showOptionsIndex = index;
+    },
+    hideOptions() {
+      this.showOptionsIndex = -1;
+    },
+    handleOptionClick(option) {
+      console.log('选中的选项:', option);
+
+      if (option.value === 'option1') {
+        this.$router.push({ name: 'LandscapeCategory', params: { option } });
+      }
+      else if (option.value === 'option2'){
+        this.$router.push({ name: 'Nprospect', params: { option } });
+      }
+      else if (option.value === 'option3'){
+        this.$router.push({ name: 'TravelMethod', params: { option } });
+      }
+      else if (option.value === 'option4'){
+        this.$router.push({ name: 'Inventory', params: { option } });
+      }
+      else if (option.value === 'option5'){
+        this.$router.push({ name: 'VisitMethod', params: { option } });
+      }
+      else if (option.value === 'option6'){
+        this.$router.push({ name: 'Hprospect', params: { option } });
+      }
+      else if (option.value === 'option7'){
+        this.$router.push({ name: 'Cuisine', params: { option } });
+      }
+      else if (option.value === 'option8'){
+        this.$router.push({ name: 'MustEat', params: { option } });
+      }
+      else if (option.value === 'option9'){
+        this.$router.push({ name: 'Dprospect', params: { option } });
+      }
+
+    },
+
 
 
 
@@ -216,7 +254,11 @@ export default {
 
     showAdvice(advice){
       this.$router.push({ name: 'Advice', params: { advice } });
+    },
+    improveExperience(imp){
+      this.$router.push({ name: 'ImproveExperience', params: { imp } });
     }
+
 
 
   },
@@ -244,11 +286,25 @@ export default {
   color: #029df2;
 }
 
+.Content-Recommendation{
+  background-color: #f9f9f9;
+  padding: 60px 0;
+  text-align: center;
+}
+
+.Content-Recommendation h1{
+  font-size: 36px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+
+
 .intro-container {
   display: flex;
   justify-content: center;
   align-items: center;
-  max-width: 800px;
+  max-width: 1800px;
   margin: 0 auto;
 }
 
@@ -341,9 +397,17 @@ export default {
   justify-content: space-between;
 }
 
-.footer-column {
-  flex-basis: 30%;
+.footer-column-left li{
+  color: #333;
 }
+
+.footer-column-center li{
+  color: #333;
+}
+.footer-column-right li {
+  color: #333;
+}
+
 
 .footer-column h3 {
   font-size: 18px;
@@ -371,24 +435,12 @@ export default {
 
 
 
-.recommend-websites {
-  margin: 40px 0;
-}
+
+
 
 .recommend-websites h2 {
   font-size: 24px;
   margin-bottom: 20px;
-}
-
-.website-list {
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.website {
-  flex-basis: 33.33%;
-  margin-bottom: 20px;
-  position: relative;
 }
 
 .website img {
@@ -397,29 +449,9 @@ export default {
   display: block;
 }
 
-.link-container {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background-color: rgba(255, 255, 255, 0.9);
-  padding: 10px;
-  border-radius: 5px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  pointer-events: none;
-  opacity: 0;
-  transition: opacity 0.3s;
-}
-
 .website:hover .link-container {
   opacity: 1;
   pointer-events: auto;
-}
-
-.link {
-  margin-bottom: 5px;
 }
 
 .link a {
@@ -431,4 +463,83 @@ export default {
 .link a:hover {
   color: #ff0000;
 }
+
+
+
+
+.image-grid {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between; /* 添加此样式使图片与整个大页面左右空开一点 */
+  padding: 0px; /* 添加此样式使图片与图片之间有一定间距 */
+  width: 80%;
+  height: 100%;
+}
+
+.image-item {
+  position: relative;
+  width: 30%;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.image-container {
+  position: relative;
+  width: 100%;
+  height: auto;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+.image-caption {
+  position: relative;
+}
+
+.image-title {
+  margin-top: 40px;
+}
+
+.image-description {
+  margin-top: 20px;
+}
+
+.options {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.image-item:hover .options {
+  opacity: 1;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+}
+
+li {
+  margin-bottom: 10px;
+  cursor: pointer;
+  color: #f1f0f0;
+}
+
+
+
+
+
 </style>

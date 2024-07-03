@@ -19,6 +19,16 @@ import Loop1 from "@/views/Guide/Loops/loop1.vue";
 import Loop2 from "@/views/Guide/Loops/loop2.vue";
 import Loop3 from "@/views/Guide/Loops/loop3.vue";
 import Loop4 from "@/views/Guide/Loops/loop4.vue";
+import ImproveExperience from '../views/bottom/ImproveExperience.vue'
+import LandscapeCategory from "@/views/Nature/Landscape-category.vue";
+import Nprospect from "@/views/Nature/Nprospect.vue";
+import TravelMethod from "@/views/Nature/TravelMethod.vue";
+import Inventory from "@/views/Home/Historical-heritage/Inventory.vue";
+import VisitMethod from "@/views/Home/Historical-heritage/VisitMethod.vue";
+import Hprospect from "@/views/Home/Historical-heritage/Hprospect.vue";
+import Cuisine from "@/views/Home/Delicacy/Cuisine.vue";
+import MustEat from "@/views/Home/Delicacy/MustEat.vue";
+import Dprospect from "@/views/Home/Delicacy/Dprospect.vue";
 Vue.use(VueRouter);
 
 const routes = [
@@ -130,6 +140,56 @@ const routes = [
         name: 'Card8',
         component: Card8
       },
+      {
+        path: '/ImproveExperience',
+        name: 'ImproveExperience',
+        component: ImproveExperience,
+      },
+      {
+        path: '/LandscapeCategory',
+        name: 'LandscapeCategory',
+        component: LandscapeCategory,
+      },
+      {
+        path: '/Nprospect',
+        name: 'Nprospect',
+        component: Nprospect,
+      },
+      {
+        path: '/TravelMethod',
+        name: 'TravelMethod',
+        component: TravelMethod,
+      },
+      {
+        path: '/Inventory',
+        name: 'Inventory',
+        component: Inventory,
+      },
+      {
+        path: '/VisitMethod',
+        name: 'VisitMethod',
+        component: VisitMethod,
+      },
+      {
+        path: '/Hprospect',
+        name: 'Hprospect',
+        component: Hprospect,
+      },
+      {
+        path: '/Cuisine',
+        name: 'Cuisine',
+        component: Cuisine,
+      },
+      {
+        path: '/MustEat',
+        name: 'MustEat',
+        component: MustEat,
+      },
+      {
+        path: '/Dprospect',
+        name: 'Dprospect',
+        component: Dprospect,
+      }
     ],
   },
 ];

@@ -1,5 +1,6 @@
 <template>
   <div id="container"></div>
+
 </template>
 <script>
 import AMapLoader from "@amap/amap-jsapi-loader";
@@ -19,23 +20,36 @@ export default {
       window._AMapSecurityConfig = {
         securityJsCode: "e513336f295f9f736d81b08c81f50ad2",
       };
-      AMapLoader.load({
-        key: "9f8ae46b082f2bf726df4182ac3ba805", // 申请好的Web端开发者Key，首次调用 load 时必填
-        version: "2.0", // 指定要加载的 JSAPI 的版本，缺省时默认为 1.4.15
-        plugins: ["AMap.Scale"], //需要使用的的插件列表，如比例尺'AMap.Scale'，支持添加多个如：['...','...']
-      })
-        .then((AMap) => {
-          this.map = new AMap.Map("container", {
-            // 设置地图容器id
-            viewMode: "3D", // 是否为3D地图模式
-            zoom: 11,
-            center: [116.397428, 39.90923],
-          });
-        })
-        .catch((e) => {
-          console.log(e);
-        });
-    },
+      // 使用浏览器的Geolocation API获取当前位置
+      if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(
+          (position) => {
+            const { latitude, longitude } = position.coords;
+
+            AMapLoader.load({
+              key: "9f8ae46b082f2bf726df4182ac3ba805",
+              version: "2.0",
+              plugins: ["AMap.Scale","AMap.ToolBar"],
+            })
+              .then((AMap) => {
+                this.map = new AMap.Map("container", {
+                  viewMode: "3D",
+                  zoom: 11,
+                  center: [longitude, latitude], // 使用获取的当前位置作为中心
+                });
+              })
+              .catch((e) => {
+                console.log(e);
+              });
+          },
+          (error) => {
+            console.error("Error occurred while retrieving geolocation: ", error);
+          }
+        );
+      } else {
+        console.error("Geolocation is not supported by this browser.");
+      }
+    }
   },
 };
 </script>
