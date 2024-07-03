@@ -10,28 +10,42 @@
     <Banner :banner="banner" />
 
     <!-- 欢迎部分 -->
-    <section class="welcome-section">
+    <section class="welcome-section animate__animated animate__fadeIn">
       <h1>WELCOME <span>TO</span> NEWMAN</h1>
-      <p>纽曼公司创立于1996年，现有员工2000余人，是一家集研发、制造、销售、服务为一体的中国高新技术企业。公司研发及生产体系健全，拥有湖南、北京和深圳三大中心。经过17年的发展，凭借强大的研发力量及资源整合能力，纽曼已拥有目前中国数码行业较为完整产品体系。产品跨越专业及消费数码产品领域。</p>
+      <div class="intro-container">
+        <div class="intro-content">
+          在这里，我们将带您领略中国最迷人的旅游胜地，探索大自然的壮丽奇观和人文风貌的深厚底蕴。<br>
+          从北国的冰雪奇缘到南疆的热带风情，从历史悠久的古城遗迹到现代繁华的都市夜景，<span class="intro-highlight">NEWMAN</span>致力于为您提供最全面、最权威的旅游信息和服务。<br><br>
+
+          无论您是热爱自然风光的探险者，还是沉迷文化历史的考古迷，亦或是追求都市时尚的潮流达人，<span class="intro-highlight">NEWMAN</span>都将为您精心推荐最佳的旅行路线和目的地。<br>
+          在这里，您可以发现最新的旅游资讯、实用的旅行攻略、贴心的住宿推荐，以及丰富多彩的当地活动。<br><br>
+
+          加入<span class="intro-highlight">NEWMAN</span>，让我们一起开启一段难忘的旅程，感受中国大地的无穷魅力，收获无数美好的回忆。<br>
+          探索未知，发现美丽——这一切，从<span class="intro-highlight">NEWMAN</span>开始。
+        </div>
+        <div class="intro-cta">
+          <a href="#explore">开始探索</a>
+        </div>
+      </div>
     </section>
 
     <!-- 2. 热门旅游景点展示 -->
-<!--    <Lanmei :list="list" />-->
+    <!--    <Lanmei :list="list" />-->
 
-<!--    &lt;!&ndash;  推荐网页 &ndash;&gt;-->
-<!--    <section class="recommend-websites">-->
-<!--      <h2>推荐网页</h2>-->
-<!--      <div class="website-list">-->
-<!--        <div class="website" v-for="website in recommendWebsites" :key="website.title">-->
-<!--          <img :src="website.image" alt="网页图片" @mouseover="showLinks(website)" @mouseleave="hideLinks" />-->
-<!--          <div class="link-container" v-show="showLinksFlag && currentWebsite === website">-->
-<!--            <div class="link" v-for="link in website.links" :key="link.title">-->
-<!--              <a :href="link.url" target="_blank">{{ link.title }}</a>-->
-<!--            </div>-->
-<!--          </div>-->
-<!--        </div>-->
-<!--      </div>-->
-<!--    </section>-->
+    <!--    &lt;!&ndash;  推荐网页 &ndash;&gt;-->
+    <!--    <section class="recommend-websites">-->
+    <!--      <h2>推荐网页</h2>-->
+    <!--      <div class="website-list">-->
+    <!--        <div class="website" v-for="website in recommendWebsites" :key="website.title">-->
+    <!--          <img :src="website.image" alt="网页图片" @mouseover="showLinks(website)" @mouseleave="hideLinks" />-->
+    <!--          <div class="link-container" v-show="showLinksFlag && currentWebsite === website">-->
+    <!--            <div class="link" v-for="link in website.links" :key="link.title">-->
+    <!--              <a :href="link.url" target="_blank">{{ link.title }}</a>-->
+    <!--            </div>-->
+    <!--          </div>-->
+    <!--        </div>-->
+    <!--      </div>-->
+    <!--    </section>-->
 
     <!--  底栏 -->
     <div class="footer">
@@ -77,7 +91,7 @@
         </div>
 
         <!-- 答案展示界面 -->
-<!--        <router-view></router-view>-->
+        <!--        <router-view></router-view>-->
 
         <div class="footer-column-right">
           <h3>服务优化</h3>
@@ -85,7 +99,7 @@
             <li @click="showQandA('问题解答')">问题解答</li>
             <li @click="showAdvice('意见')">意见</li>
             <li @click="show('')"></li>
-<!--            <li><a href="#">问卷调查</a></li>-->
+            <!--            <li><a href="#">问卷调查</a></li>-->
           </ul>
         </div>
 
@@ -226,24 +240,57 @@ export default {
 
 .welcome-section {
   background-color: #f9f9f9;
-  padding: 40px 0;
+  padding: 60px 0;
+  text-align: center;
 }
 
 .welcome-section h1 {
-  line-height: 40px;
-  text-align: center;
-  margin-bottom: 30px;
+  font-size: 36px;
+  margin-bottom: 20px;
+  color: #333;
 }
 
 .welcome-section h1 span {
-  border-bottom: #029df2 5px solid;
+  color: #029df2;
 }
 
-.welcome-section p {
-  font-size: 14px;
-  color: #666666;
-  text-align: center;
+.intro-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 800px;
+  margin: 0 auto;
 }
+
+.intro-content {
+  font-size: 18px;
+  line-height: 1.6;
+  color: #666;
+}
+
+.intro-highlight {
+  color: #029df2;
+  font-weight: bold;
+}
+
+.intro-cta {
+  margin-top: 30px;
+}
+
+.intro-cta a {
+  display: inline-block;
+  padding: 12px 30px;
+  background-color: #029df2;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 25px;
+  transition: background-color 0.3s;
+}
+
+.intro-cta a:hover {
+  background-color: #0276aa;
+}
+
 
 
 .footer {
