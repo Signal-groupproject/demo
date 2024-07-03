@@ -1,11 +1,14 @@
-import Vue from 'vue'
-import VueRouter from 'vue-router'
-import Home from '../views/Home/Home.vue'
-import Layout from '../views/Layout.vue'
-import AnswerPage from '../views/bottom/AnswerPage.vue'
-import QandA from '../views/bottom/QandA.vue'
+import Vue from 'vue';
+import VueRouter from 'vue-router';
+import Home from '../views/Home/Home.vue';
+import Layout from '../views/Layout.vue';
+import AnswerPage from '../views/bottom/AnswerPage.vue';
+import QandA from '../views/bottom/QandA.vue';
 import Advice from '../views/bottom/Advice.vue';
-Vue.use(VueRouter)
+import Attractions from '../views/Travel/Attractions.vue'; // 新增
+import Food from '../views/Travel/Food.vue'; // 新增
+
+Vue.use(VueRouter);
 
 const routes = [
   {
@@ -30,7 +33,12 @@ const routes = [
       {
         path: '/travel',
         name: 'Travel',
-        component: () => import('../views/Travel/Travel.vue'),
+        component: () => import('../views/Travel/Attractions.vue'),
+      },
+      {
+        path: '/travel',
+        name: 'Travel',
+        component: () => import('../views/Travel/Food.vue'),
       },
       {
         path: '/AnswerPage',
@@ -46,22 +54,23 @@ const routes = [
         path: '/Advice',
         name: 'Advice',
         component: Advice,
-      }
-
-    ]
-  }
-
-]
-
-//vue 路由相同路径跳转报错
-const originalPush = VueRouter.prototype.push
-VueRouter.prototype.push = function push(location) {
-  return originalPush.call(this, location).catch(err => err)
-}
+      },
+      {
+        path: '/travel/attractions', // 新增
+        name: 'Attractions',
+        component: Attractions,
+      },
+      {
+        path: '/travel/food', // 新增
+        name: 'Food',
+        component: Food,
+      },
+    ],
+  },
+];
 
 const router = new VueRouter({
-  routes
-})
+  routes,
+});
 
-
-export default router
+export default router;
