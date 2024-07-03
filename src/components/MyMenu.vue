@@ -10,7 +10,15 @@
     >
       <el-menu-item index="/">首页</el-menu-item>
       <el-menu-item index="/news">新闻</el-menu-item>
-      <el-menu-item index="/social">攻略群</el-menu-item>
+
+      <el-submenu index="/guide">
+        <template #title>
+          <span>攻略</span>
+        </template>
+        <el-menu-item index="/social">攻略群</el-menu-item>
+        <el-menu-item index="/guidebook">旅游攻略</el-menu-item>
+      </el-submenu>
+
       <el-submenu index="/travel">
         <template slot="title">热门旅游</template>
         <el-menu-item index="/travel/attractions">热门景点</el-menu-item>

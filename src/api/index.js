@@ -21,9 +21,6 @@ const api = {
     },
     getNews() {
         return axios.get(base.news)
-    },
-    getLoop() {
-        return axios.get(base.loop)
     }
 }
 
