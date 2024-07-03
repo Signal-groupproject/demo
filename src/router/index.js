@@ -2,7 +2,8 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '../views/Home/Home.vue'
 import Layout from '../views/Layout.vue'
-import AnswerPage from "@/views/Home/buttom/AnswerPage.vue";
+import AnswerPage from '../views/bottom/AnswerPage.vue'
+import QandA from '../views/bottom/QandA.vue'
 Vue.use(VueRouter)
 
 const routes = [
@@ -31,13 +32,17 @@ const routes = [
         component: () => import('../views/Travel/Travel.vue'),
       },
       {
-        path: '/answer/:question/:answer',
-        name: 'answer',
+        path: '/AnswerPage',
+        name: 'AnswerPage',
         component: AnswerPage,
       },
+      {
+        path: '/QandA',
+        name: 'QandA',
+        component: QandA,
+      }
 
     ]
-
   }
 
 ]

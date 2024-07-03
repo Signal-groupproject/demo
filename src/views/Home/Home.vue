@@ -16,9 +16,24 @@
     </section>
 
     <!-- 2. 热门旅游景点展示 -->
-    <Lanmei :list="list" />
+<!--    <Lanmei :list="list" />-->
 
-    <!-- 3. 页脚 -->
+<!--    &lt;!&ndash;  推荐网页 &ndash;&gt;-->
+<!--    <section class="recommend-websites">-->
+<!--      <h2>推荐网页</h2>-->
+<!--      <div class="website-list">-->
+<!--        <div class="website" v-for="website in recommendWebsites" :key="website.title">-->
+<!--          <img :src="website.image" alt="网页图片" @mouseover="showLinks(website)" @mouseleave="hideLinks" />-->
+<!--          <div class="link-container" v-show="showLinksFlag && currentWebsite === website">-->
+<!--            <div class="link" v-for="link in website.links" :key="link.title">-->
+<!--              <a :href="link.url" target="_blank">{{ link.title }}</a>-->
+<!--            </div>-->
+<!--          </div>-->
+<!--        </div>-->
+<!--      </div>-->
+<!--    </section>-->
+
+    <!--  底栏 -->
     <div class="footer">
       <div class="footer-top">
         <div class="footer-left">
@@ -62,16 +77,18 @@
         </div>
 
         <!-- 答案展示界面 -->
-        <router-view></router-view>
+<!--        <router-view></router-view>-->
 
         <div class="footer-column-right">
           <h3>服务优化</h3>
           <ul>
-            <li><a href="#">问题解答</a></li>
+            <li @click="showQandA('问题解答')">问题解答</li>
             <li><a href="#">意见</a></li>
             <li><a href="#">问卷调查</a></li>
           </ul>
         </div>
+
+
       </div>
 
       <div class="footer-bottom">
@@ -84,7 +101,7 @@
 <script>
 import Banner from "./Banner.vue";
 import Lanmei from "./Lanmei.vue";
-import AnswerPage from "@/views/Home/buttom/AnswerPage.vue";
+import AnswerPage from "@/views/bottom/AnswerPage.vue";
 import MyPagination from "../../components/MyPagination.vue";
 
 export default {
@@ -103,12 +120,48 @@ export default {
       total: 100,
       pageSize: 10,
 
+
+      // recommendWebsites: [
+      //   {
+      //     title: '推荐网页1',
+      //     image: 'https://example.com/image1.jpg',
+      //     links: [
+      //       { title: '链接1', url: 'https://example.com/link1' },
+      //       { title: '链接2', url: 'https://example.com/link2' },
+      //       { title: '链接3', url: 'https://example.com/link3' },
+      //     ],
+      //   },
+      //   {
+      //     title: '推荐网页2',
+      //     image: 'https://example.com/image2.jpg',
+      //     links: [
+      //       { title: '链接4', url: 'https://example.com/link4' },
+      //       { title: '链接5', url: 'https://example.com/link5' },
+      //       { title: '链接6', url: 'https://example.com/link6' },
+      //     ],
+      //   },
+      //   {
+      //     title: '推荐网页3',
+      //     image: 'https://example.com/image3.jpg',
+      //     links: [
+      //       { title: '链接7', url: 'https://example.com/link7' },
+      //       { title: '链接8', url: 'https://example.com/link8' },
+      //       { title: '链接9', url: 'https://example.com/link9' },
+      //     ],
+      //   },
+      // ],
+      // showLinksFlag: false,
+      // currentWebsite: null,
+
+
+
       faqAnswers: {
         'FAQ项1': 'FAQ项1的答案',
         'FAQ项2': 'FAQ项2的答案',
         'FAQ项3': 'FAQ项3的答案'
       },
-      selectedAnswer: ''
+      selectedAnswer: '',
+
     };
   },
   created() {
@@ -125,17 +178,39 @@ export default {
       console.log(banner);
       this.banner = banner;
     });
+
     // 蓝莓酱数据---------
-    this.getHttp(1);
+    // this.getHttp(1);
+
+    //
   },
 
 
   methods: {
     // 其他方法
+
+    // showLinks(website) {
+    //   this.showLinksFlag = true;
+    //   this.currentWebsite = website;
+    // },
+    // hideLinks() {
+    //   this.showLinksFlag = false;
+    //   this.currentWebsite = null;
+    // },
+
+
+
     showAnswer(question) {
       const answer = this.faqAnswers[question];
-      this.$router.push({ name: 'answer', params: { question, answer } });
+      this.$router.push({ name: 'AnswerPage', params: { question, answer } });
+    },
+
+    showQandA(qAndA) {
+      // 使用路由导航打开新界面
+      this.$router.push({ name: 'QandA', params: { qAndA } });
     }
+
+
   },
 };
 </script>
@@ -250,6 +325,69 @@ export default {
 }
 
 .footer-column ul li a:hover {
+  color: #ff0000;
+}
+
+
+
+.recommend-websites {
+  margin: 40px 0;
+}
+
+.recommend-websites h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.website-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.website {
+  flex-basis: 33.33%;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.website img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.link-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 10px;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.website:hover .link-container {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.link {
+  margin-bottom: 5px;
+}
+
+.link a {
+  text-decoration: none;
+  color: #333;
+  font-size: 16px;
+}
+
+.link a:hover {
   color: #ff0000;
 }
 </style>
