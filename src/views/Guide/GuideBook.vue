@@ -34,8 +34,7 @@ import router from "@/router";
 const images = [
   {img: require('@/pictures/page1/about_top.jpg'), link: '/loop1'},
   {img: require('@/pictures/page1/about_top.jpg'), link: '/loop2'},
-  {img: require('@/pictures/page1/about_top.jpg'), link: '/loop3'},
-  {img: require('@/pictures/page1/about_top.jpg'), link: '/loop4'},
+  {img: require('@/pictures/page1/about_top.jpg'), link: '/loop3'}
 ];
 
 // 8个卡片的数据
@@ -52,16 +51,13 @@ const cards = [
 
 function handleCardClick(card) {
   // 跳转到对应链接
-  router.push(card.link); // 如果使用了vue-router，需要解注释并确保已正确导入和配置
+  router.push(card.link);
 }
 
 function search() {
   // 实现搜索逻辑
   console.log('Perform search');
 }
-
-let enlargeIndex = null;
-
 function showEnlarge(index) {
   enlargeIndex = index;
 }
