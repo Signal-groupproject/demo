@@ -80,10 +80,10 @@ export default {
         ]
       ],
       linkUrls: [
-        'link-url-1',
-        'link-url-2',
-        'link-url-3',
-        'link-url-4',
+        'https://www.bilibili.com/video/BV1PV411174z/',
+        'http://www.fuding.gov.cn/zjfd/mlfd/fdms/202311/t20231113_1882752.htm',
+        'https://www.sohu.com/a/224984686_349458',
+        'https://baike.baidu.com/item/%E8%8E%86%E7%94%B0%E5%8D%A4%E9%9D%A2/372491',
         'link-url-5'
       ],
       imagePaths: [

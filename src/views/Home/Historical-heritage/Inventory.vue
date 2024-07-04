@@ -4,8 +4,16 @@
     <h1 class="title">非遗文化</h1>
     <h2 class="t1">打铁花</h2>
     <div class="spacer"></div>
-    <h2 class="subtitle">页面副标题</h2>
-    <p class="intro">这是页面的简要介绍。</p>
+
+    <p class="intro intro-box">
+      打铁花是中国河南省及山西省等地流传的一种传统民<br>
+      间烟火表演艺术，属于国家级非物质文化遗产。该技<br>
+      艺源于北宋时期，兴盛于明清，至今已有千年历史。<br>
+      表演时将高达千余度的高温铁水用特制工具击打至空<br>
+      中或特定的柳枝花棚上，铁水瞬间绽放成绚烂的火<br>
+      花，犹如铁树开花，同时伴有烟花鞭炮燃放，形成壮<br>
+      观且极具视觉冲力的夜空景象。
+    </p>
     <div class="spacer"></div>
     <div class="card" v-for="(card, index) in cards" :key="index" @click="goToLink(card.link)" :class="{ 'fade-in': cardHoverIndex === index }" @mouseover="cardHoverIndex = index" @mouseout="cardHoverIndex = -1">
       <h3 class="card-title">{{ card.title }}</h3>
@@ -51,23 +59,41 @@ export default {
   text-align: center;
 }
 
-
-
-.title {
-  font-size: 36px;
-  font-weight: bold;
-  margin-top: 20px;
+.t0{
+  font-size: 15px;
+  margin: 0 auto;
+  padding: 10px 20px;
+  display: inline-block;
+  background-color: #ad6407;
+  color: #fff;
+  border: 2px solid #fff;
+  border-radius: 8px;
 }
 
-.subtitle {
-  font-size: 24px;
-  margin-bottom: 10px;
+.title {
+  font-size: 45px;
+  font-weight: bold;
+  margin-top: 20px;
+  color: #ad6407;
+}
+
+.t1{
+  font-size: 30px;
+  font-weight: bold;
+  color: #000000;
 }
 
 .intro {
   font-size: 18px;
   margin-bottom: 20px;
 }
+
+.intro-box {
+  border: 3px dashed #ad6407;
+  padding: 10px;
+}
+
+
 
 .spacer {
   height: 20px;
