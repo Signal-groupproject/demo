@@ -136,8 +136,8 @@ export default {
       images: [
         {
           src: require('./image/喀拉峻草原.png'),
-          title: '自然',
-          description: 'lllllll',
+          title: '',
+          description: '',
           options: [
             { label: '自然景观类别', value: 'option1' },
             { label: '游玩方式', value: 'option2' },
@@ -147,7 +147,7 @@ export default {
         {
           src: require('./image/古格王国遗址.png'),
           options: [
-            { label: '文化遗产盘点', value: 'option4' },
+            { label: '打铁花', value: 'option4' },
             { label: '游玩方式', value: 'option5' },
             { label: '发展前景', value: 'option6' }
           ]
