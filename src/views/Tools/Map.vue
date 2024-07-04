@@ -1,11 +1,11 @@
 <template>
   <div>
-    <div id="container"></div>
     <div>
-      <input type="text" placeholder="请输入加载地点" v-model="place">
-      <button @click="loadMap">加载地图</button>
-      <button @click="getCurrentLocation">当前位置</button>
+      <input type="text" placeholder="请输入指定位置" v-model="place">
+      <button @click="loadMap">加载指定位置</button>
+      <button @click="getCurrentLocation">加载当前位置</button>
     </div>
+    <div id="container"></div>
   </div>
 </template>
 
@@ -37,9 +37,10 @@ export default {
         plugins: ["AMap.Scale"],
       }).then((AMap) => {
         this.map = new AMap.Map("container", {
-          viewMode: "3D",
+          viewMode: "2D",
           zoom: 17,
-          scale:2
+          scale:2,
+          center:[118.0941,24.5754]
         });
       }).catch((e) => {
         console.log(e);
@@ -66,6 +67,7 @@ export default {
         navigator.geolocation.getCurrentPosition(
             (position) => {
               const {latitude, longitude} = position.coords;
+              console.log(position.coords);
               this.map.setCenter([longitude, latitude]);
             },
             (error) => {
@@ -82,9 +84,9 @@ export default {
 
 <style scoped>
 #container {
-  width: 80%;
+  width: 60%;
   height: 600px;
-  border-radius: 10px;
+  border-radius: 30px;
   margin: 20px auto;
 }
 

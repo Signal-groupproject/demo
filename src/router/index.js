@@ -56,6 +56,11 @@ const routes = [
         component: () => import('../views/Tools/Spots.vue'),
       },
       {
+        path: '/ai',
+        name: 'Ai',
+        component: () => import('../views/Tools/Ai.vue'),
+      },
+      {
         path: '/travel',
         name: 'Attractions',
         component: () => import('../views/Travel/Attractions.vue'),
