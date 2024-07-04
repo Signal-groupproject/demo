@@ -118,7 +118,6 @@ export default {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-
 .food-title {
   font-size: 24px;
   margin-bottom: 20px;
@@ -133,6 +132,8 @@ export default {
   overflow: hidden;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   animation: fadeIn 1s ease-in-out;
+  max-width: 800px; /* Adjust the maximum width */
+  margin: 0 auto; /* Center the item horizontally */
 }
 
 .food-image {
@@ -176,12 +177,16 @@ export default {
 }
 
 .search-bar input {
-  padding: 8px 12px;
+  padding: 10px 15px; /* Increased padding for better appearance */
   border: 1px solid #ccc;
-  border-radius: 4px;
-  margin-right: 10px;
-  width: 200px;
-  font-size: 14px;
+  border-radius: 5px; /* Rounded corners */
+  width: 250px; /* Adjusted width */
+  font-size: 16px; /* Slightly increased font size */
+  transition: border-color 0.3s ease; /* Smooth transition for border color */
+}
+
+.search-bar input:focus {
+  border-color: #007bff; /* Highlight border color on focus */
 }
 
 .search-instruction {
@@ -192,16 +197,17 @@ export default {
 }
 
 .search-bar button {
-  padding: 8px 16px;
+  padding: 10px 20px; /* Increased padding for better touch target */
   background-color: #007bff;
   color: #fff;
   border: none;
-  border-radius: 4px;
+  border-radius: 5px;
   cursor: pointer;
-  font-size: 14px;
+  font-size: 16px; /* Slightly increased font size */
+  transition: background-color 0.3s ease; /* Smooth transition for background color */
 }
 
 .search-bar button:hover {
-  background-color: #0056b3;
+  background-color: #0056b3; /* Darker shade on hover */
 }
 </style>
