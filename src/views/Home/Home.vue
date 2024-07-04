@@ -139,7 +139,7 @@ export default {
           title: '',
           description: '',
           options: [
-            { label: '自然景观类别', value: 'option1' },
+            { label: '自然景观之旅', value: 'option1' },
             { label: '游玩方式', value: 'option2' },
             { label: '发展前景', value: 'option3' }
           ]
@@ -195,10 +195,10 @@ export default {
         this.$router.push({ name: 'LandscapeCategory', params: { option } });
       }
       else if (option.value === 'option2'){
-        this.$router.push({ name: 'Nprospect', params: { option } });
+        this.$router.push({ name: 'TravelMethod', params: { option } });
       }
       else if (option.value === 'option3'){
-        this.$router.push({ name: 'TravelMethod', params: { option } });
+        this.$router.push({ name: 'Nprospect', params: { option } });
       }
       else if (option.value === 'option4'){
         this.$router.push({ name: 'Inventory', params: { option } });
