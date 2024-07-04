@@ -77,9 +77,6 @@ export default {
     showInfo(index) {
       this.infoIndex = index;
     },
-    hideInfo(index) {
-      this.infoIndex = -1;
-    },
     copyToClipboard(info) {
       navigator.clipboard.writeText(info)
           .then(() => {
@@ -94,10 +91,6 @@ export default {
 </script>
 
 <style scoped>
-.about {
-  text-align: center;
-}
-
 /* 搜索框区域样式 */
 .search-container {
   display: flex;

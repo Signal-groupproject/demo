@@ -18,7 +18,6 @@ import Card8 from "@/views/Guide/GuideCards/card8.vue";
 import Loop1 from "@/views/Guide/Loops/loop1.vue";
 import Loop2 from "@/views/Guide/Loops/loop2.vue";
 import Loop3 from "@/views/Guide/Loops/loop3.vue";
-import Loop4 from "@/views/Guide/Loops/loop4.vue";
 import ImproveExperience from '../views/bottom/ImproveExperience.vue'
 import LandscapeCategory from "@/views/Nature/Landscape-category.vue";
 import Nprospect from "@/views/Nature/Nprospect.vue";
@@ -99,7 +98,6 @@ const routes = [
       { path: '/loop1', name:'Loop1', component: Loop1 },
       { path: '/loop2', name:'Loop2', component: Loop2 },
       { path: '/loop3', name:'Loop3', component: Loop3 },
-      { path: '/loop4', name:'Loop4', component: Loop4 },
       {
         path: '/card1',
         name: 'Card1',

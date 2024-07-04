@@ -32,9 +32,9 @@ import Loop from "@/views/Guide/Loop.vue";
 import router from "@/router";
 
 const images = [
-  {img: require('@/pictures/page1/about_top.jpg'), link: '/loop1'},
-  {img: require('@/pictures/page1/about_top.jpg'), link: '/loop2'},
-  {img: require('@/pictures/page1/about_top.jpg'), link: '/loop3'}
+  {img: require('@/pictures/page1/dali.jpg'), link: '/loop1', caption:"大理"},
+  {img: require('@/pictures/page1/chongqing1.jpg'), link: '/loop2', caption:"重庆"},
+  {img: require('@/pictures/page1/beijing.jpg'), link: '/loop3', caption: "北京"}
 ];
 
 // 8个卡片的数据
