@@ -76,16 +76,18 @@
   margin-bottom: 8px;
   border-bottom: 2px solid #ccc;
   padding-bottom: 5px;
+  color: black; /* 设置问题文字颜色为黑色 */
 }
 
 .qa-answer {
-  color: #666;
+  color: #666; /* 设置回答文字颜色为深灰色 */
   line-height: 1.6;
 }
 
 .route-list {
   margin-top: 10px;
-  padding-left: 20px;
+  padding-left: 5px;
+  text-align: left;
 }
 
 .travel-tips {
@@ -106,9 +108,9 @@
   width: 100%;
 }
 
-body{
-  margin:0;
-  padding:0;
+body {
+  margin: 0;
+  padding: 0;
 }
 
 .header-text {
@@ -131,7 +133,11 @@ body{
 }
 
 img {
-  width:100%;
-  height:auto;
+  width: 100%;
+  height: auto;
+}
+
+.route-list li {
+  color: #666; /* 设置推荐线路文字颜色为深灰色 */
 }
 </style>
