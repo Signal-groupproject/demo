@@ -1,6 +1,5 @@
 <template>
   <div id="container"></div>
-
 </template>
 <script>
 import AMapLoader from "@amap/amap-jsapi-loader";
@@ -16,6 +15,7 @@ export default {
     }
   },
   methods: {
+
     initAMap() {
       window._AMapSecurityConfig = {
         securityJsCode: "e513336f295f9f736d81b08c81f50ad2",
@@ -29,7 +29,7 @@ export default {
             AMapLoader.load({
               key: "9f8ae46b082f2bf726df4182ac3ba805",
               version: "2.0",
-              plugins: ["AMap.Scale","AMap.ToolBar"],
+              plugins: ["AMap.Scale"],
             })
               .then((AMap) => {
                 this.map = new AMap.Map("container", {

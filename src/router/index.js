@@ -51,6 +51,11 @@ const routes = [
         component: () => import('../views/Tools/Map.vue'),
       },
       {
+        path: '/spots',
+        name: 'Spots',
+        component: () => import('../views/Tools/Spots.vue'),
+      },
+      {
         path: '/travel',
         name: 'Attractions',
         component: () => import('../views/Travel/Attractions.vue'),

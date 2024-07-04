@@ -55,14 +55,6 @@
       </div>
     </section>
 
-
-
-
-
-
-
-
-
     <!--  底栏 -->
     <div class="footer">
       <div class="footer-top">
@@ -117,10 +109,7 @@
 
           </ul>
         </div>
-
-
       </div>
-
       <div class="footer-bottom">
         <p>版权所有 © 2024</p>
       </div>
@@ -144,7 +133,6 @@ export default {
       list: [], // 蓝莓数据
       total: 100,
       pageSize: 10,
-
       images: [
         {
           src: require('./image/喀拉峻草原.png'),
@@ -174,9 +162,6 @@ export default {
         }
       ],
       showOptionsIndex: -1
-
-
-
     };
   },
   created() {
@@ -193,14 +178,10 @@ export default {
       console.log(banner);
       this.banner = banner;
     });
-
-
   },
-
 
   methods: {
     // 其他方法
-
     showOptions(index) {
       this.showOptionsIndex = index;
     },
@@ -240,9 +221,6 @@ export default {
 
     },
 
-
-
-
     showAnswer(question) {
       this.$router.push({ name: 'AnswerPage', params: { question } });
     },
@@ -258,18 +236,12 @@ export default {
     improveExperience(imp){
       this.$router.push({ name: 'ImproveExperience', params: { imp } });
     }
-
-
-
   },
 };
 </script>
 
 <style>
 /* 其他样式 */
-
-
-
 .welcome-section {
   background-color: #f9f9f9;
   padding: 60px 0;
@@ -297,8 +269,6 @@ export default {
   margin-bottom: 20px;
   color: #333;
 }
-
-
 
 .intro-container {
   display: flex;
@@ -337,14 +307,11 @@ export default {
   background-color: #0276aa;
 }
 
-
-
 .footer {
   margin: 0 200px;
   background-color: #ffffff;
   padding: 20px;
 }
-
 
 .footer-top {
   display: flex;
@@ -433,11 +400,6 @@ export default {
   color: #ff0000;
 }
 
-
-
-
-
-
 .recommend-websites h2 {
   font-size: 24px;
   margin-bottom: 20px;
@@ -463,9 +425,6 @@ export default {
 .link a:hover {
   color: #ff0000;
 }
-
-
-
 
 .image-grid {
   position: relative;
@@ -537,9 +496,4 @@ li {
   cursor: pointer;
   color: #f1f0f0;
 }
-
-
-
-
-
 </style>

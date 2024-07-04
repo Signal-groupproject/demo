@@ -16,6 +16,9 @@ const api = {
     },
     getRandomImage(){
         return axios.get(base.randomImage)
+    },
+    getLocation(){
+        return axios.get(base.location)
     }
 }
 

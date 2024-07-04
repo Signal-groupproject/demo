@@ -49,9 +49,9 @@ export default {
   },
   methods: {
     // 获取新闻数据的方法
-    // async getNewsData() {
+    // async getTravel_newsData() {
     //   try {
-    //     const response = await this.$api.getNews(); // 调用接口获取数据
+    //     const response = await this.$api.getTravel_news(); // 调用接口获取数据
     //     if (response.data.code === 200) {
     //       this.newsItems = response.data.result.newslist; // 将新闻列表存储到组件数据中
     //       console.log(this.newsItems)
@@ -65,7 +65,7 @@ export default {
     //   }
     // },
     //新闻接口调用上限时，使用一下代码
-     getNewsData() {
+    getNewsData() {
       setTimeout(() => { // 模拟异步请求
         this.newsItems = [
           { id: 1, title: '新闻标题1', url: 'https://www.example.com/news1', ctime: '2024-09-01' },
@@ -149,18 +149,6 @@ export default {
   justify-content: center;
   align-items: center;
   height: 200px;
-}
-.loading-spinner::after { /*设置背景虚图层*/
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background: inherit;
-    left: 0;
-    top: 0;
-    filter: blur(5px);
-    z-index: 2;
-    border-radius: 60px;
 }
 
 @keyframes shake {/*弹跳效果*/
