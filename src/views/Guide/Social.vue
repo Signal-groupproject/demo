@@ -6,11 +6,10 @@
     <!-- 搜索框区域 -->
     <div class="search-container">
       <el-input v-model="searchQuery" placeholder="搜索你想去的地名或群号" class="search-input"></el-input>
-      <el-button type="primary" @click="searchComponent">搜索</el-button>
     </div>
 
     <!-- 搜索结果显示 -->
-    <div v-if="searchClicked && searchResults.length" class="search-results">
+    <div v-if="searchResults.length" class="search-results">
       <p v-for="result in searchResults" :key="result" class="result-item">
         {{ result }}
       </p>
@@ -37,9 +36,10 @@
 
     <!-- 底部网站信息 -->
     <footer class="footer">
-      <p>青春没有售价，疯狂就在当下，爱着这炙热的青春。</p>
+      <p>这里是QQMaiMaiBu好玩到爆旅游攻略社交群</p>
     </footer>
   </div>
+
 </template>
 
 <script>
@@ -77,12 +77,6 @@ export default {
     }
   },
   methods: {
-    searchComponent() {
-      this.searchResults = this.components.filter(component =>
-          component.includes(this.searchQuery)
-      );
-      this.searchClicked = true; // 设置搜索按钮点击状态为true
-    },
     handleMouseOver(index) {
       this.infoIndex = index;
     },
@@ -226,20 +220,5 @@ export default {
 .info-text {
   font-size: 14px;
   padding: 10px;
-}
-
-.copy-button {
-  margin-top: 10px;
-  font-size: 12px;
-  color: #333;
-  background-color: #eee;
-  border: 1px solid #ccc;
-  padding: 5px 10px;
-  cursor: pointer;
-  transition: background-color 0.3s ease-in-out;
-}
-
-.copy-button:hover {
-  background-color: #ccc;
 }
 </style>

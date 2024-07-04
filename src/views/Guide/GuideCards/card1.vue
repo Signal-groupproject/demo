@@ -44,20 +44,20 @@
             <p>成都大熊猫基地是中国乃至全球最著名的大熊猫繁育和保护中心。</p>
           </div>
         </div>
-      <div class="grid-item">
-        <h3>杜甫草堂</h3>
-       <img :src="require('@/views/Guide/GuideCards/cardImage/6.jpg')" alt="杜甫草堂">
-        <div class="text-box">
-          <p>杜甫草堂是唐代诗人杜甫的故居，保留了大量关于杜甫的文化遗产和历史遗迹。</p>
+        <div class="grid-item">
+          <h3>杜甫草堂</h3>
+          <img :src="require('@/views/Guide/GuideCards/cardImage/6.jpg')" alt="杜甫草堂">
+          <div class="text-box">
+            <p>杜甫草堂是唐代诗人杜甫的故居，保留了大量关于杜甫的文化遗产和历史遗迹。</p>
+          </div>
         </div>
-      </div>
-      <div class="grid-item">
-        <h3>青城山</h3>
-        <img :src="require('@/views/Guide/GuideCards/cardImage/7.jpg')" alt="青城山">
-        <div class="text-box">
-          <p>青城山位于成都市西南，是道教名山之一，以其险峻的山势和古朴的道观建筑闻名。</p>
+        <div class="grid-item">
+          <h3>青城山</h3>
+          <img :src="require('@/views/Guide/GuideCards/cardImage/7.jpg')" alt="青城山">
+          <div class="text-box">
+            <p>青城山位于成都市西南，是道教名山之一，以其险峻的山势和古朴的道观建筑闻名。</p>
+          </div>
         </div>
-      </div>
       </div>
     </section>
 
@@ -81,7 +81,7 @@
         </div>
         <div class="grid-item">
           <h3>夫妻肺片</h3>
-           <img :src="require('@/views/Guide/GuideCards/cardImage/11.jpg')" alt="夫妻肺片">
+          <img :src="require('@/views/Guide/GuideCards/cardImage/11.jpg')" alt="夫妻肺片">
           <div class="text-box">
             <p>夫妻肺片是成都的一道传统川菜，以其麻辣爽口著称。</p>
           </div>
@@ -90,93 +90,64 @@
     </section>
 
     <section class="section">
-  <h2>旅游路线推荐</h2>
-  <div class="text-box">
+      <h2>旅游路线推荐</h2>
+      <div class="text-box">
 
-    <!-- 文化古迹游 -->
-    <h3>1. 文化古迹游</h3>
-    <p><strong>第一天</strong></p>
-    <ul>
-      <li><strong>上午：</strong> 武侯祠
-        <ul>
-          <li>参观武侯祠，了解三国时期蜀汉丞相诸葛亮的生平和历史背景。</li>
-        </ul>
-      </li>
-      <li><strong>午餐：</strong> 在周围的传统餐馆品尝地道的川菜。</li>
-      <li><strong>下午：</strong> 杜甫草堂
-        <ul>
-          <li>参观杜甫草堂，感受唐代诗人杜甫的生活和文化。</li>
-        </ul>
-      </li>
-    </ul>
+        <!-- 文化古迹游 -->
+        <h3>1. 文化古迹游</h3>
+        <p><strong>第一天</strong></p>
+        <p><strong>上午：</strong> 武侯祠
+        <p>参观武侯祠，了解三国时期蜀汉丞相诸葛亮的生平和历史背景。</p>
+        </p>
+        <p><strong>午餐：</strong> 在周围的传统餐馆品尝地道的川菜。</p>
+        <p><strong>下午：</strong> 杜甫草堂
+        <p>参观杜甫草堂，感受唐代诗人杜甫的生活和文化。</p>
+        </p>
 
-    <p><strong>第二天</strong></p>
-    <ul>
-      <li><strong>上午：</strong> 宽窄巷子
-        <ul>
-          <li>漫步宽窄巷子，体验成都传统民居和文化艺术品。</li>
-        </ul>
-      </li>
-      <li><strong>午餐：</strong> 在宽窄巷子或者锦里古街品尝成都小吃。</li>
-      <li><strong>下午：</strong> 锦里古街
-        <ul>
-          <li>游览锦里古街，购买手工艺品或者尝试当地的甜品和茶点。</li>
-        </ul>
-      </li>
-    </ul>
+        <p><strong>第二天</strong></p>
+        <p><strong>上午：</strong> 宽窄巷子
+        <p>漫步宽窄巷子，体验成都传统民居和文化艺术品。</p>
+        </p>
+        <p><strong>午餐：</strong> 在宽窄巷子或者锦里古街品尝成都小吃。</p>
+        <p><strong>下午：</strong> 锦里古街
+        <p>游览锦里古街，购买手工艺品或者尝试当地的甜品和茶点。</p>
+        </p>
 
-    <!-- 美食体验游 -->
-    <h3>2. 美食体验游</h3>
-    <p><strong>第一天</strong></p>
-    <ul>
-      <li><strong>全天：</strong> 火锅体验
-        <ul>
-          <li><strong>上午：</strong> 尝试麻辣火锅，可以选择知名的火锅连锁店或地方性小火锅店。</li>
-          <li><strong>下午：</strong> 尝试清汤火锅，享受不同口味的成都火锅。</li>
-        </ul>
-      </li>
-    </ul>
+        <!-- 美食体验游 -->
+        <h3>2. 美食体验游</h3>
+        <p><strong>第一天</strong></p>
+        <p><strong>全天：</strong> 火锅体验
+        <p><strong>上午：</strong> 尝试麻辣火锅，可以选择知名的火锅连锁店或地方性小火锅店。</p>
+        <p><strong>下午：</strong> 尝试清汤火锅，享受不同口味的成都火锅。</p>
+        </p>
 
-    <p><strong>第二天</strong></p>
-    <ul>
-      <li><strong>全天：</strong> 小吃探索
-        <ul>
-          <li><strong>上午：</strong> 到市场或地摊上品尝串串香、兔头火锅等特色小吃。</li>
-          <li><strong>下午：</strong> 参观成都烹饪博物馆，了解川菜文化和历史。</li>
-        </ul>
-      </li>
-    </ul>
+        <p><strong>第二天</strong></p>
+        <p><strong>全天：</strong> 小吃探索
+        <p><strong>上午：</strong> 到市场或地摊上品尝串串香、兔头火锅等特色小吃。</p>
+        <p><strong>下午：</strong> 参观成都烹饪博物馆，了解川菜文化和历史。</p>
+        </p>
 
-    <!-- 自然风光游 -->
-    <h3>3. 自然风光游</h3>
-    <p><strong>第一天</strong></p>
-    <ul>
-      <li><strong>上午：</strong> 成都大熊猫基地
-        <ul>
-          <li>观赏熊猫，并了解它们的生活习性和保护现状。</li>
-        </ul>
-      </li>
-      <li><strong>午餐：</strong> 在大熊猫基地周围的餐馆品尝午餐。</li>
-      <li><strong>下午：</strong> 锦里古街
-        <ul>
-          <li>参观锦里古街，购买纪念品或者体验成都传统手工艺。</li>
-        </ul>
-      </li>
-    </ul>
+        <!-- 自然风光游 -->
+        <h3>3. 自然风光游</h3>
+        <p><strong>第一天</strong></p>
+        <p><strong>上午：</strong> 成都大熊猫基地
+        <p>观赏熊猫，并了解它们的生活习性和保护现状。</p>
+        </p>
+        <p><strong>午餐：</strong> 在大熊猫基地周围的餐馆品尝午餐。</p>
+        <p><strong>下午：</strong> 锦里古街
+        <p>参观锦里古街，购买纪念品或者体验成都传统手工艺。</p>
+        </p>
 
-    <p><strong>第二天</strong></p>
-    <ul>
-      <li><strong>上午：</strong> 青城山
-        <ul>
-          <li>早晨爬青城山，欣赏自然风光和古建筑。</li>
-        </ul>
-      </li>
-      <li><strong>午餐：</strong> 在山下的餐馆品尝当地山间菜。</li>
-      <li><strong>下午：</strong> 回到市区，自由活动或购物。</li>
-    </ul>
+        <p><strong>第二天</strong></p>
+        <p><strong>上午：</strong> 青城山
+        <p>早晨爬青城山，欣赏自然风光和古建筑。</p>
+        </p>
+        <p><strong>午餐：</strong> 在山下的餐馆品尝当地山间菜。</p>
+        <p><strong>下午：</strong> 回到市区，自由活动或购物。</p>
+        </p>
 
-  </div>
-</section>
+      </div>
+    </section>
 
     <!-- 交通信息 -->
     <section class="section">
@@ -189,6 +160,7 @@
     </section>
   </div>
 </template>
+
 
 <script>
 export default {
@@ -230,6 +202,7 @@ h1, h2, h3 {
   padding: 10px;
   margin-bottom: 10px;
 }
+
 img {
   max-width: 100%;
   height: auto;

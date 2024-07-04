@@ -90,113 +90,82 @@
   </div>
 </section>
 
-    
-<section class="section">
-  <h2>旅游路线推荐</h2>
-  <div class="text-box">
-  
-    <!-- 文化古迹游 -->
-    <h3>1. 文化古迹游</h3>
-    <p><strong>第一天</strong></p>
-    <ul>
-      <li><strong>上午：</strong> 上海博物馆
-        <ul>
-          <li>参观上海博物馆，了解上海的历史和文化。</li>
-        </ul>
-      </li>
-      <li><strong>午餐：</strong> 在外滩或南京路品尝上海特色小吃。</li>
-      <li><strong>下午：</strong> 中国历史博物馆
-        <ul>
-          <li>参观中国历史博物馆，深入了解中国的古代文明。</li>
-        </ul>
-      </li>
-    </ul>
 
-    <p><strong>第二天</strong></p>
-    <ul>
-      <li><strong>上午：</strong> 上海城隍庙
-        <ul>
-          <li>游览上海城隍庙，感受老上海的历史氛围。</li>
-        </ul>
-      </li>
-      <li><strong>午餐：</strong> 在豫园城隍庙附近品尝地道的上海菜。</li>
-      <li><strong>下午：</strong> 上海科技馆
-        <ul>
-          <li>参观上海科技馆，了解现代科技与上海的发展。</li>
-        </ul>
-      </li>
-    </ul>
+    <section class="section">
+      <h2>旅游路线推荐</h2>
+      <div class="text-box">
 
-    <!-- 美食体验游 -->
-    <h3>2. 美食体验游</h3>
-    <p><strong>第一天</strong></p>
-    <ul>
-      <li><strong>全天：</strong> 小笼包探索
-        <ul>
-          <li><strong>上午：</strong> 品尝老字号小笼包，如南翔馒头店。</li>
-          <li><strong>下午：</strong> 尝试现代创新小笼包，体验不同口味。</li>
-        </ul>
-      </li>
-    </ul>
+        <!-- 文化古迹游 -->
+        <h3>1. 文化古迹游</h3>
+        <p><strong>第一天</strong></p>
+        <p><strong>上午：</strong> 上海博物馆
+        <p>参观上海博物馆，了解上海的历史和文化。</p>
+        </p>
+        <p><strong>午餐：</strong> 在外滩或南京路品尝上海特色小吃。</p>
+        <p><strong>下午：</strong> 中国历史博物馆
+        <p>参观中国历史博物馆，深入了解中国的古代文明。</p>
+        </p>
 
-    <p><strong>第二天</strong></p>
-    <ul>
-      <li><strong>全天：</strong> 海派菜肴
-        <ul>
-          <li><strong>上午：</strong> 在申花路菜市场品尝上海海派菜肴。</li>
-          <li><strong>下午：</strong> 参观中华艺术宫，了解上海的文化艺术。</li>
-        </ul>
-      </li>
-    </ul>
+        <p><strong>第二天</strong></p>
+        <p><strong>上午：</strong> 上海城隍庙
+        <p>游览上海城隍庙，感受老上海的历史氛围。</p>
+        </p>
+        <p><strong>午餐：</strong> 在豫园城隍庙附近品尝地道的上海菜。</p>
+        <p><strong>下午：</strong> 上海科技馆
+        <p>参观上海科技馆，了解现代科技与上海的发展。</p>
+        </p>
 
-    <!-- 自然风光游 -->
-    <h3>3. 自然风光游</h3>
-    <p><strong>第一天</strong></p>
-    <ul>
-      <li><strong>上午：</strong> 世纪公园
-        <ul>
-          <li>在世纪公园漫步，享受城市中的自然氛围。</li>
-        </ul>
-      </li>
-      <li><strong>午餐：</strong> 在公园内的餐馆品尝午餐。</li>
-      <li><strong>下午：</strong> 上海野生动物园
-        <ul>
-          <li>游览上海野生动物园，观赏各种野生动物。</li>
-        </ul>
-      </li>
-    </ul>
+        <!-- 美食体验游 -->
+        <h3>2. 美食体验游</h3>
+        <p><strong>第一天</strong></p>
+        <p><strong>全天：</strong> 小笼包探索
+        <p><strong>上午：</strong> 品尝老字号小笼包，如南翔馒头店。</p>
+        <p><strong>下午：</strong> 尝试现代创新小笼包，体验不同口味。</p>
+        </p>
 
-    <p><strong>第二天</strong></p>
-    <ul>
-      <li><strong>上午：</strong> 上海迪士尼乐园
-        <ul>
-          <li>体验上海迪士尼乐园的乐趣。</li>
-        </ul>
-      </li>
-      <li><strong>午餐：</strong> 在乐园内或附近品尝各种美食。</li>
-      <li><strong>下午：</strong> 自由活动或购物，体验上海的现代生活。</li>
-    </ul>
+        <p><strong>第二天</strong></p>
+        <p><strong>全天：</strong> 海派菜肴
+        <p><strong>上午：</strong> 在申花路菜市场品尝上海海派菜肴。</p>
+        <p><strong>下午：</strong> 参观中华艺术宫，了解上海的文化艺术。</p>
+        </p>
 
-  </div>
-</section>
-    
+        <!-- 自然风光游 -->
+        <h3>3. 自然风光游</h3>
+        <p><strong>第一天</strong></p>
+        <p><strong>上午：</strong> 世纪公园
+        <p>在世纪公园漫步，享受城市中的自然氛围。</p>
+        </p>
+        <p><strong>午餐：</strong> 在公园内的餐馆品尝午餐。</p>
+        <p><strong>下午：</strong> 上海野生动物园
+        <p>游览上海野生动物园，观赏各种野生动物。</p>
+        </p>
+
+        <p><strong>第二天</strong></p>
+        <p><strong>上午：</strong> 上海迪士尼乐园
+        <p>体验上海迪士尼乐园的乐趣。</p>
+        </p>
+        <p><strong>午餐：</strong> 在乐园内或附近品尝各种美食。</p>
+        <p><strong>下午：</strong> 自由活动或购物，体验上海的现代生活。</p>
+        </p>
+
+      </div>
+    </section>
+
     <!-- 上海交通信息 -->
-<section class="section">
-  <h2>交通信息</h2>
-  <div class="text-box">
-    <p>上海市内交通非常便利，有以下几种主要方式：</p>
-    <ul>
-      <li><strong>地铁：</strong> 上海拥有十几条地铁线路，覆盖了市区及周边地区，是最快捷的出行方式。</li>
-      <li><strong>公交：</strong> 上海的公交系统非常发达，几乎覆盖了整个市区和郊区，是经济实惠的出行选择。</li>
-      <li><strong>出租车：</strong> 上海的出租车较为便利，可以通过手机软件或在街头招呼到出租车。</li>
-      <li><strong>网约车：</strong> 通过滴滴、美团等网约车平台可以轻松叫到车辆，方便快捷。</li>
-      <li><strong>自行车：</strong> 上海有很多共享单车服务，适合短途出行或休闲骑行。</li>
-    </ul>
-    <p>从上海浦东国际机场到市中心约需50分钟，从上海虹桥国际机场到市中心约需30分钟，具体时间取决于交通状况。</p>
+    <section class="section">
+      <h2>交通信息</h2>
+      <div class="text-box">
+        <p>上海市内交通非常便利，有以下几种主要方式：</p>
+        <p><strong>地铁：</strong> 上海拥有十几条地铁线路，覆盖了市区及周边地区，是最快捷的出行方式。</p>
+        <p><strong>公交：</strong> 上海的公交系统非常发达，几乎覆盖了整个市区和郊区，是经济实惠的出行选择。</p>
+        <p><strong>出租车：</strong> 上海的出租车较为便利，可以通过手机软件或在街头招呼到出租车。</p>
+        <p><strong>网约车：</strong> 通过滴滴、美团等网约车平台可以轻松叫到车辆，方便快捷。</p>
+        <p><strong>自行车：</strong> 上海有很多共享单车服务，适合短途出行或休闲骑行。</p>
+        <p>从上海浦东国际机场到市中心约需50分钟，从上海虹桥国际机场到市中心约需30分钟，具体时间取决于交通状况。</p>
+      </div>
+      <img src="@/views/Guide/GuideCards/cardImage/shanghai11.jpg" alt="上海交通路线图">
+    </section>
   </div>
- <img src="@/views/Guide/GuideCards/cardImage/shanghai11.jpg" alt="上海交通路线图">
-</section>
-     </div>
 </template>
 
 <script>

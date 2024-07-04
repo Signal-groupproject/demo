@@ -89,60 +89,89 @@
   </div>
 </section>
 
-<section class="section">
-  <h2>旅游路线推荐</h2>
-  <div class="text-box">
-  
-    <!-- 文化古迹游 -->
-    <h3>1. 文化古迹游</h3>
-    <p><strong>第一天</strong></p>
-    <ul>
-      <li><strong>上午：</strong> 鼓浪屿
-        <ul>
-          <li>漫步鼓浪屿，参观其特色建筑和享受海边风光。</li>
-        </ul>
-      </li>
-      <li><strong>午餐：</strong> 在岛上的餐馆品尝新鲜的海鲜。</li>
-      <li><strong>下午：</strong> 南普陀寺
-        <ul>
-          <li>参观南普陀寺，体验佛教文化和寺庙建筑。</li>
-        </ul>
-      </li>
-    </ul>
-    <p><strong>第二天</strong></p>
-    <ul>
-      <li><strong>上午：</strong> 环岛路
-        <ul>
-          <li>沿着环岛路散步，欣赏海滨风光。</li>
-        </ul>
-      </li>
-      <li><strong>午餐：</strong> 在曾厝垵品尝地道的闽南小吃。</li>
-      <li><strong>下午：</strong> 曾厝垵
-        <ul>
-          <li>游览曾厝垵，探索其独特的文化和建筑风格。</li>
-        </ul>
-      </li>
-    </ul>
+    <section class="section">
+      <h2>旅游路线推荐</h2>
+      <div class="text-box">
+
+        <!-- 文化古迹游 -->
+        <h3>1. 文化古迹游</h3>
+        <p><strong>第一天</strong></p>
+        <p>
+          <strong>上午：</strong> 鼓浪屿
+        <p>游览鼓浪屿，领略厦门的历史文化。</p>
+        </p>
+        <p><strong>午餐：</strong> 在岛上的餐馆品尝当地特色美食。</p>
+        <p>
+          <strong>下午：</strong> 厦门大学
+        <p>参观厦门大学，了解其悠久的教育历史。</p>
+        </p>
+
+        <p><strong>第二天</strong></p>
+        <p>
+          <strong>上午：</strong> 南普陀寺
+        <p>游览南普陀寺，感受宗教文化的庄严氛围。</p>
+        </p>
+        <p><strong>午餐：</strong> 在寺庙附近的餐馆享用午餐。</p>
+        <p>
+          <strong>下午：</strong> 中山路步行街
+        <p>漫步中山路步行街，购物和体验当地的商业氛围。</p>
+        </p>
+
+        <!-- 美食体验游 -->
+        <h3>2. 美食体验游</h3>
+        <p><strong>第一天</strong></p>
+        <p>
+          <strong>全天：</strong> 美食探索
+        <p><strong>上午：</strong> 到市场尝试当地的早点。</p>
+        <p><strong>下午：</strong> 到厦门地道小吃店品尝特色美食。</p>
+        </p>
+
+        <p><strong>第二天</strong></p>
+        <p>
+          <strong>全天：</strong> 海鲜美食之旅
+        <p><strong>上午：</strong> 到海鲜市场体验选购海鲜的乐趣。</p>
+        <p><strong>下午：</strong> 在厦门著名的海鲜餐馆享用午餐。</p>
+        </p>
+
+        <!-- 自然风光游 -->
+        <h3>3. 自然风光游</h3>
+        <p><strong>第一天</strong></p>
+        <p>
+          <strong>上午：</strong> 日光岩
+        <p>登上日光岩，俯瞰厦门美丽的海岸线。</p>
+        </p>
+        <p><strong>午餐：</strong> 在景区内或附近的餐馆品尝午餐。</p>
+        <p>
+          <strong>下午：</strong> 鼓浪屿沙滩
+        <p>在鼓浪屿的沙滩上放松身心，享受海滨风光。</p>
+        </p>
+
+        <p><strong>第二天</strong></p>
+        <p>
+          <strong>全天：</strong> 环岛路骑行
+        <p><strong>上午：</strong> 在环岛路上骑行，欣赏沿途的自然景观。</p>
+        <p><strong>下午：</strong> 在岛上的海边小店休息或品尝冰淇淋。</p>
+        </p>
+
+      </div>
+    </section>
+
+
+    <!-- 厦门交通信息 -->
+    <section class="section">
+      <h2>交通信息</h2>
+      <div class="text-box">
+        <p>厦门市内交通便利，主要方式包括：</p>
+        <p><strong>地铁：</strong> 厦门目前拥有几条地铁线路，连接市区主要景点和商业区。</p>
+        <p><strong>公交：</strong> 厦门的公交系统覆盖了城市各个角落，是经济实惠的出行选择。</p>
+        <p><strong>出租车：</strong> 在厦门，可以轻松通过街头招呼或手机软件叫到出租车。</p>
+        <p><strong>网约车：</strong> 利用滴滴等平台可以方便地叫到网约车，适合快速出行。</p>
+        <p><strong>自行车：</strong> 厦门有多家共享单车服务，适合短途出行或休闲骑行。</p>
+        <p>从厦门高崎国际机场到市中心约需30分钟，具体时间视交通状况而定。</p>
+      </div>
+      <img src="@/views/Guide/GuideCards/cardImage/xiamen11.jpg" alt="厦门交通路线图">
+    </section>
   </div>
-</section>
-    
- <!-- 厦门交通信息 -->
-<section class="section">
-  <h2>交通信息</h2>
-  <div class="text-box">
-    <p>厦门市内交通便利，主要方式包括：</p>
-    <ul>
-      <li><strong>地铁：</strong> 厦门目前拥有几条地铁线路，连接市区主要景点和商业区。</li>
-      <li><strong>公交：</strong> 厦门的公交系统覆盖了城市各个角落，是经济实惠的出行选择。</li>
-      <li><strong>出租车：</strong> 在厦门，可以轻松通过街头招呼或手机软件叫到出租车。</li>
-      <li><strong>网约车：</strong> 利用滴滴等平台可以方便地叫到网约车，适合快速出行。</li>
-      <li><strong>自行车：</strong> 厦门有多家共享单车服务，适合短途出行或休闲骑行。</li>
-    </ul>
-    <p>从厦门高崎国际机场到市中心约需30分钟，具体时间视交通状况而定。</p>
-  </div>
-  <img src="@/views/Guide/GuideCards/cardImage/xiamen11.jpg" alt="厦门交通路线图">
-</section>
-</div>
  </template>
 <script>
 export default {

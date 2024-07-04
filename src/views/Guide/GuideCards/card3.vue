@@ -89,112 +89,89 @@
   </div>
 </section>
 
-    
+
     <section class="section">
-  <h2>旅游路线推荐</h2>
-  <div class="text-box">
-  
-    <!-- 文化古迹游 -->
-    <h3>1. 文化古迹游</h3>
-    <p><strong>第一天</strong></p>
-    <ul>
-      <li><strong>上午：</strong> 广州博物馆
-        <ul>
-          <li>参观广州博物馆，了解广州的历史文化。</li>
-        </ul>
-      </li>
-      <li><strong>午餐：</strong> 在附近的餐馆品尝广东粤菜。</li>
-      <li><strong>下午：</strong> 陈家祠
-        <ul>
-          <li>游览陈家祠，了解广州传统民居建筑和文化。</li>
-        </ul>
-      </li>
-    </ul>
+      <h2>旅游路线推荐</h2>
+      <div class="text-box">
 
-    <p><strong>第二天</strong></p>
-    <ul>
-      <li><strong>上午：</strong> 广州塔
-        <ul>
-          <li>乘坐观光电梯，俯瞰广州全景。</li>
-        </ul>
-      </li>
-      <li><strong>午餐：</strong> 在广州塔附近的餐厅品尝美食。</li>
-      <li><strong>下午：</strong> 越秀公园
-        <ul>
-          <li>漫步越秀公园，欣赏自然风光。</li>
-        </ul>
-      </li>
-    </ul>
+        <!-- 文化古迹游 -->
+        <h3>1. 文化古迹游</h3>
+        <p><strong>第一天</strong></p>
+        <p>
+          <strong>上午：</strong> 广州博物馆
+        <p>参观广州博物馆，了解广州的历史文化。</p>
+        </p>
+        <p><strong>午餐：</strong> 在附近的餐馆品尝广东粤菜。</p>
+        <p>
+          <strong>下午：</strong> 陈家祠
+        <p>游览陈家祠，了解广州传统民居建筑和文化。</p>
+        </p>
 
-    <!-- 美食体验游 -->
-    <h3>2. 美食体验游</h3>
-    <p><strong>第一天</strong></p>
-    <ul>
-      <li><strong>全天：</strong> 粤菜体验
-        <ul>
-          <li><strong>上午：</strong> 在酒家品尝广州早茶。</li>
-          <li><strong>下午：</strong> 到市场或餐馆品尝广州小吃如炳胜点心。</li>
-        </ul>
-      </li>
-    </ul>
+        <p><strong>第二天</strong></p>
+        <p>
+          <strong>上午：</strong> 广州塔
+        <p>乘坐观光电梯，俯瞰广州全景。</p>
+        </p>
+        <p><strong>午餐：</strong> 在广州塔附近的餐厅品尝美食。</p>
+        <p>
+          <strong>下午：</strong> 越秀公园
+        <p>漫步越秀公园，欣赏自然风光。</p>
+        </p>
 
-    <p><strong>第二天</strong></p>
-    <ul>
-      <li><strong>全天：</strong> 茶文化探索
-        <ul>
-          <li><strong>上午：</strong> 参观广州茶文化博物馆。</li>
-          <li><strong>下午：</strong> 到岭南印象园品茶体验。</li>
-        </ul>
-      </li>
-    </ul>
+        <!-- 美食体验游 -->
+        <h3>2. 美食体验游</h3>
+        <p><strong>第一天</strong></p>
+        <p>
+          <strong>全天：</strong> 粤菜体验
+        <p><strong>上午：</strong> 在酒家品尝广州早茶。</p>
+        <p><strong>下午：</strong> 到市场或餐馆品尝广州小吃如炳胜点心。</p>
+        </p>
 
-    <!-- 自然风光游 -->
-    <h3>3. 自然风光游</h3>
-    <p><strong>第一天</strong></p>
-    <ul>
-      <li><strong>上午：</strong> 白云山
-        <ul>
-          <li>登上白云山，欣赏广州的自然风光。</li>
-        </ul>
-      </li>
-      <li><strong>午餐：</strong> 在山下的餐馆品尝当地风味。</li>
-      <li><strong>下午：</strong> 白云洞
-        <ul>
-          <li>游览白云洞，探索自然景观。</li>
-        </ul>
-      </li>
-    </ul>
+        <p><strong>第二天</strong></p>
+        <p>
+          <strong>全天：</strong> 茶文化探索
+        <p><strong>上午：</strong> 参观广州茶文化博物馆。</p>
+        <p><strong>下午：</strong> 到岭南印象园品茶体验。</p>
+        </p>
 
-    <p><strong>第二天</strong></p>
-    <ul>
-      <li><strong>全天：</strong> 海珠湖公园
-        <ul>
-          <li><strong>上午：</strong> 漫步海珠湖公园，享受自然环境。</li>
-          <li><strong>下午：</strong> 在公园周边探索小吃。</li>
-        </ul>
-      </li>
-    </ul>
+        <!-- 自然风光游 -->
+        <h3>3. 自然风光游</h3>
+        <p><strong>第一天</strong></p>
+        <p>
+          <strong>上午：</strong> 白云山
+        <p>登上白云山，欣赏广州的自然风光。</p>
+        </p>
+        <p><strong>午餐：</strong> 在山下的餐馆品尝当地风味。</p>
+        <p>
+          <strong>下午：</strong> 白云洞
+        <p>游览白云洞，探索自然景观。</p>
+        </p>
 
-  </div>
-</section>
+        <p><strong>第二天</strong></p>
+        <p>
+          <strong>全天：</strong> 海珠湖公园
+        <p><strong>上午：</strong> 漫步海珠湖公园，享受自然环境。</p>
+        <p><strong>下午：</strong> 在公园周边探索小吃。</p>
+        </p>
 
-    
+      </div>
+    </section>
+
+
     <!-- 广州交通信息 -->
-<section class="section">
-  <h2>交通信息</h2>
-  <div class="text-box">
-    <p>广州市内交通便利，主要出行方式包括：</p>
-    <ul>
-      <li><strong>地铁：</strong> 广州拥有多条地铁线路，覆盖市区及周边地区，是快捷方便的出行方式。</li>
-      <li><strong>公交：</strong> 广州公交系统非常发达，几乎覆盖了整个城市，是经济实惠的选择。</li>
-      <li><strong>出租车：</strong> 在广州，可以通过街头招呼或手机软件轻松叫到出租车。</li>
-      <li><strong>网约车：</strong> 利用滴滴等平台可以方便地叫到网约车，适合快速出行。</li>
-      <li><strong>自行车：</strong> 广州有多家共享单车服务，适合短途出行或休闲骑行。</li>
-    </ul>
-    <p>从广州白云国际机场到市中心约需40分钟，具体时间取决于交通状况。</p>
-  </div>
-   <img src="@/views/Guide/GuideCards/cardImage/guangzhou11.jpg" alt="广州交通路线图">
-</section>
+    <section class="section">
+      <h2>交通信息</h2>
+      <div class="text-box">
+        <p>广州市内交通便利，主要出行方式包括：</p>
+        <p><strong>地铁：</strong> 广州拥有多条地铁线路，覆盖市区及周边地区，是快捷方便的出行方式。</p>
+        <p><strong>公交：</strong> 广州公交系统非常发达，几乎覆盖了整个城市，是经济实惠的选择。</p>
+        <p><strong>出租车：</strong> 在广州，可以通过街头招呼或手机软件轻松叫到出租车。</p>
+        <p><strong>网约车：</strong> 利用滴滴等平台可以方便地叫到网约车，适合快速出行。</p>
+        <p><strong>自行车：</strong> 广州有多家共享单车服务，适合短途出行或休闲骑行。</p>
+        <p>从广州白云国际机场到市中心约需40分钟，具体时间取决于交通状况。</p>
+      </div>
+      <img src="@/views/Guide/GuideCards/cardImage/guangzhou11.jpg" alt="广州交通路线图">
+    </section>
   </div>
 </template>
 
