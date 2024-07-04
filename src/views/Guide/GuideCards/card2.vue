@@ -9,51 +9,65 @@
         <p>上海，简称“沪”，是中国东部沿海重要的经济、金融、贸易和航运中心。</p>
         <p>上海以其现代化的城市风貌、国际化的氛围和丰富的文化遗产而闻名。</p>
       </div>
-      <img src="@/views/Guide/GuideCards/cardImage/shanghai1.jpg" alt="上海">
+      <a href="https://whlyj.sh.gov.cn/" target="_blank">
+        <img src="@/views/Guide/GuideCards/cardImage/shanghai1.jpg" alt="上海">
+      </a>
     </section>
-    
+
     <!-- 热门景点 -->
 <section class="section">
   <h2>热门景点</h2>
   <div class="grid-container">
     <div class="grid-item">
       <h3>外滩</h3>
+      <a href="https://baike.baidu.com/item/%E5%A4%96%E6%BB%A9/40416" target="_blank">
       <img src="@/views/Guide/GuideCards/cardImage/shanghai2.jpg" alt="上海外滩">
+      </a>
       <div class="text-box">
         <p>外滩是上海最具标志性的景点之一，以其欧洲式建筑群和黄浦江的壮丽景色闻名。</p>
       </div>
     </div>
     <div class="grid-item">
       <h3>东方明珠塔</h3>
+      <a href="https://www.orientalpearltower.com/#/" target="_blank">
       <img src="@/views/Guide/GuideCards/cardImage/shanghai3.jpg" alt="东方明珠">
+      </a>
       <div class="text-box">
         <p>东方明珠塔是上海的地标性建筑，是中国最高的电视塔，也是上海的象征之一。</p>
       </div>
     </div>
     <div class="grid-item">
       <h3>豫园</h3>
+      <a href="https://www.yugarden.com.cn/page/articleView/index.html" target="_blank">
       <img src="@/views/Guide/GuideCards/cardImage/shanghai4.jpg" alt="豫园">
+      </a>
       <div class="text-box">
         <p>豫园是上海著名的古典园林，以其精美的园林建筑和传统的文化氛围吸引众多游客。</p>
       </div>
     </div>
     <div class="grid-item">
       <h3>上海科技馆</h3>
+      <a href="https://www.sstm.org.cn/" target="_blank">
       <img src="@/views/Guide/GuideCards/cardImage/shanghai5.jpg" alt="上海科技馆">
+      </a>
       <div class="text-box">
         <p>上海科技馆是一座大型科技类博物馆，展示了许多科技与自然历史方面的展览和实验。</p>
       </div>
     </div>
     <div class="grid-item">
       <h3>上海自然博物馆</h3>
+      <a href="https://www.snhm.org.cn/" target="_blank">
      <img src="@/views/Guide/GuideCards/cardImage/shanghai6.jpg" alt="上海自然博物馆">
+      </a>
       <div class="text-box">
         <p>上海自然博物馆展示了丰富的自然历史和生物多样性内容，是学术研究和科普教育的重要场所。</p>
       </div>
     </div>
     <div class="grid-item">
       <h3>上海迪士尼乐园</h3>
+      <a href="https://www.shanghaidisneyresort.com/" target="_blank">
       <img src="@/views/Guide/GuideCards/cardImage/shanghai7.jpg" alt="上海迪士尼">
+      </a>
       <div class="text-box">
         <p>上海迪士尼乐园是中国大陆首个迪士尼度假区，结合了迪士尼经典和中国文化元素。</p>
       </div>
@@ -163,7 +177,9 @@
         <p><strong>自行车：</strong> 上海有很多共享单车服务，适合短途出行或休闲骑行。</p>
         <p>从上海浦东国际机场到市中心约需50分钟，从上海虹桥国际机场到市中心约需30分钟，具体时间取决于交通状况。</p>
       </div>
+      <a href="https://map.baidu.com/@13523265.31,3641114.64,12z" target="_blank">
       <img src="@/views/Guide/GuideCards/cardImage/shanghai11.jpg" alt="上海交通路线图">
+      </a>
     </section>
   </div>
 </template>
