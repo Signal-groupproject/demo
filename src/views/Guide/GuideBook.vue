@@ -32,17 +32,17 @@ import Loop from "@/views/Guide/Loop.vue";
 import router from "@/router";
 
 const images = [
-  {img: require('@/pictures/page1/dali.jpg'), link: '/loop1', caption:"大理"},
-  {img: require('@/pictures/page1/chongqing1.jpg'), link: '/loop2', caption:"重庆"},
-  {img: require('@/pictures/page1/beijing.jpg'), link: '/loop3', caption: "北京"}
+  {img: require('@/views/Guide/Loops/loopImages/dali.jpg'), link: '/loop1', caption:"大理"},
+  {img: require('@/views/Guide/Loops/loopImages/chongqing1.jpg'), link: '/loop2', caption:"重庆"},
+  {img: require('@/views/Guide/Loops/loopImages/beijing3.jpg'), link: '/loop3', caption: "北京"}
 ];
 
 // 8个卡片的数据
 const cards = [
-  {img: require('@/pictures/page1/about_top.jpg'), alt: 'Card 1', text: 'Card 1 Description', link: '/card1'},
-  {img: require('@/pictures/page1/about_top.jpg'), alt: 'Card 2', text: 'Card 2 Description', link: '/card2'},
-  {img: require('@/pictures/page1/about_top.jpg'), alt: 'Card 3', text: 'Card 3 Description', link: '/card3'},
-  {img: require('@/pictures/page1/about_top.jpg'), alt: 'Card 4', text: 'Card 4 Description', link: '/card4'},
+  {img: require('@/views/Guide/GuideCards/cardImage/5.jpg'), alt: 'Card 1', text: '成都攻略', link: '/card1'},
+  {img: require('@/views/Guide/GuideCards/cardImage/shanghai3.jpg'), alt: 'Card 2', text: '上海攻略', link: '/card2'},
+  {img: require('@/views/Guide/GuideCards/cardImage/guangzhou1.jpg'), alt: 'Card 3', text: '广州攻略', link: '/card3'},
+  {img: require('@/views/Guide/GuideCards/cardImage/xiamen1.jpg'), alt: 'Card 4', text: '厦门攻略', link: '/card4'},
   {img: require('@/pictures/page1/about_top.jpg'), alt: 'Card 5', text: 'Card 5 Description', link: '/card5'},
   {img: require('@/pictures/page1/about_top.jpg'), alt: 'Card 6', text: 'Card 6 Description', link: '/card6'},
   {img: require('@/pictures/page1/about_top.jpg'), alt: 'Card 7', text: 'Card 7 Description', link: '/card7'},
