@@ -9,7 +9,9 @@
         <p>厦门，简称“鹭”，是福建省下辖的地级市，位于福建东南沿海地区。</p>
         <p>厦门以其优美的海岸线、浓厚的海洋文化和美丽的风景而著称。</p>
       </div>
+      <a href="https://wlj.xm.gov.cn/whly/" target="_blank">
       <img src="@/views/Guide/GuideCards/cardImage/xiamen1.jpg" alt="厦门">
+      </a>
     </section>
     
    <!-- 热门景点 -->
@@ -18,42 +20,54 @@
   <div class="grid-container">
     <div class="grid-item">
       <h3>鼓浪屿</h3>
+      <a href="https://xmferry.com/wybm/wshlk/xchgpp/index.htm" target="_blank">
       <img src="@/views/Guide/GuideCards/cardImage/xiamen2.jpg" alt="鼓浪屿">
+      </a>
       <div class="text-box">
         <p>鼓浪屿是厦门最具特色的文化景点之一，以其独特的建筑风格和浪漫氛围闻名。</p>
       </div>
     </div>
     <div class="grid-item">
       <h3>南普陀寺</h3>
+      <a href="https://web.nanputuo.com/" target="_blank">
       <img src="@/views/Guide/GuideCards/cardImage/xiamen3.jpg" alt="南普陀寺">
+      </a>
       <div class="text-box">
         <p>南普陀寺是厦门的一座知名佛教寺庙，吸引了许多信徒和游客前来参观和礼佛。</p>
       </div>
     </div>
     <div class="grid-item">
       <h3>环岛路</h3>
+      <a href="https://www.mafengwo.cn/gonglve/ziyouxing/95214.html" target="_blank">
       <img src="@/views/Guide/GuideCards/cardImage/xiamen4.jpg" alt="环岛路">
+      </a>
       <div class="text-box">
         <p>环岛路是厦门著名的海滨步道，沿途景色优美，适合散步和休闲。</p>
       </div>
     </div>
     <div class="grid-item">
       <h3>曾厝垵</h3>
+      <a href="https://www.mafengwo.cn/gonglve/ziyouxing/262324.html" target="_blank">
       <img src="@/views/Guide/GuideCards/cardImage/xiamen5.jpg" alt="曾厝垵">
+      </a>
       <div class="text-box">
         <p>曾厝垵是厦门的一个文化村落，保留了传统的闽南建筑风格和生活方式。</p>
       </div>
     </div>
     <div class="grid-item">
       <h3>厦门大学</h3>
+      <a href="https://www.xmu.edu.cn/" target="_blank">
       <img src="@/views/Guide/GuideCards/cardImage/xiamen6.jpg" alt="厦门大学">
+      </a>
       <div class="text-box">
         <p>厦门大学是一所历史悠久的著名高等学府，校园环境优美，是游客参观的热门地点。</p>
       </div>
     </div>
     <div class="grid-item">
       <h3>集美学村</h3>
+      <a href="https://you.ctrip.com/sight/xiamen21/2343.html" target="_blank">
       <img src="@/views/Guide/GuideCards/cardImage/xiamen7.jpg" alt="集美学村">
+      </a>
       <div class="text-box">
         <p>集美学村是集美区的文化名片，融合了教育、文化和旅游，具有浓厚的文化氛围。</p>
       </div>
@@ -67,21 +81,27 @@
   <div class="grid-container">
     <div class="grid-item">
       <h3>海鲜</h3>
+      <a href="https://wlj.xm.gov.cn/whly/" target="_blank">
       <img src="@/views/Guide/GuideCards/cardImage/xiamen8.jpg" alt="海鲜">
+      </a>
       <div class="text-box">
         <p>厦门以其新鲜美味的海鲜而闻名，各种海鲜菜品是厦门必尝的美食之一。</p>
       </div>
     </div>
     <div class="grid-item">
       <h3>沙茶面</h3>
+      <a href="https://wlj.xm.gov.cn/whly/" target="_blank">
       <img src="@/views/Guide/GuideCards/cardImage/xiamen9.jpg" alt="沙茶面">
+      </a>
       <div class="text-box">
         <p>厦门的沙茶面以其独特的香料和浓郁的汤头著称，是当地人钟爱的一道面食。</p>
       </div>
     </div>
     <div class="grid-item">
       <h3>花生汤圆</h3>
+      <a href="https://wlj.xm.gov.cn/whly/" target="_blank">
       <img src="@/views/Guide/GuideCards/cardImage/xiamen10.jpg" alt="花生汤圆">
+      </a>
       <div class="text-box">
         <p>花生汤圆是厦门的传统甜品，外面裹上糯米粉，里面包着花生馅，口感独特。</p>
       </div>
@@ -169,7 +189,9 @@
         <p><strong>自行车：</strong> 厦门有多家共享单车服务，适合短途出行或休闲骑行。</p>
         <p>从厦门高崎国际机场到市中心约需30分钟，具体时间视交通状况而定。</p>
       </div>
+      <a href="https://map.baidu.com/@13150875.542160653,2797039.888532939,12.97z" target="_blank">
       <img src="@/views/Guide/GuideCards/cardImage/xiamen11.jpg" alt="厦门交通路线图">
+      </a>
     </section>
   </div>
  </template>

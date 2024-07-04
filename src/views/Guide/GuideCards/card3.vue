@@ -9,7 +9,9 @@
         <p>广州，简称“穗”，是广东省省会，中国南方重要的经济、文化中心城市。</p>
         <p>广州以其悠久的历史、繁华的商业和丰富的美食而闻名。</p>
       </div>
+      <a href="https://wglj.gz.gov.cn/" target="_blank">
       <img src="@/views/Guide/GuideCards/cardImage/guangzhou1.jpg" alt="广州">
+      </a>
     </section>
     
    <!-- 热门景点 -->
@@ -18,42 +20,54 @@
   <div class="grid-container">
     <div class="grid-item">
       <h3>广州塔</h3>
+      <a href="https://www.cantontower.com/" target="_blank">
       <img src="@/views/Guide/GuideCards/cardImage/guangzhou2.jpg" alt="广州塔">
+      </a>
       <div class="text-box">
         <p>广州塔是广州的标志性建筑，不仅是电视塔，也是观光、餐饮和娱乐中心。</p>
       </div>
     </div>
     <div class="grid-item">
       <h3>珠江夜游</h3>
+      <a href="http://www.zhujiangyeyou.co/" target="_blank">
       <img src="@/views/Guide/GuideCards/cardImage/guangzhou3.jpg" alt="珠江夜游">
+      </a>
       <div class="text-box">
         <p>珠江夜游是游客在广州必体验的活动之一，可以欣赏到灯火辉煌的城市夜景。</p>
       </div>
     </div>
     <div class="grid-item">
       <h3>广州南沙天后宫</h3>
+      <a href="https://www.nanshabay.com/zh_hans/leisuretravel_view.html?id=11" target="_blank">
       <img src="@/views/Guide/GuideCards/cardImage/guangzhou4.jpg" alt="广州南沙天后宫">
+      </a>
       <div class="text-box">
         <p>南沙天后宫是广州的一处历史古迹，供奉着妈祖，吸引众多信徒和游客前来参观。</p>
       </div>
     </div>
     <div class="grid-item">
       <h3>广州动物园</h3>
+      <a href="https://www.gzzoo.com/default.aspx" target="_blank">
       <img src="@/views/Guide/GuideCards/cardImage/guangzhou5.jpg" alt="广州动物园">
+      </a>
       <div class="text-box">
         <p>广州动物园是家庭游的好去处，拥有丰富的动物种类和世界级的动物表演。</p>
       </div>
     </div>
     <div class="grid-item">
       <h3>陈家祠</h3>
+      <a href="https://www.gzchenjiaci.com/MYwebsite/rc/my_index.htm" target="_blank">
       <img src="@/views/Guide/GuideCards/cardImage/guangzhou6.jpg" alt="陈家祠">
+      </a>
       <div class="text-box">
         <p>陈家祠是广州著名的文化古迹，展示了传统的岭南建筑风格和生活方式。</p>
       </div>
     </div>
     <div class="grid-item">
       <h3>白云山</h3>
+      <a href="https://www.baiyunshan.com.cn/" target="_blank">
       <img src="@/views/Guide/GuideCards/cardImage/guangzhou7.jpg" alt="白云山">
+      </a>
       <div class="text-box">
         <p>白云山是广州的一座著名山脉，风景秀丽，是登山和户外爱好者的理想地点。</p>
       </div>
@@ -170,7 +184,9 @@
         <p><strong>自行车：</strong> 广州有多家共享单车服务，适合短途出行或休闲骑行。</p>
         <p>从广州白云国际机场到市中心约需40分钟，具体时间取决于交通状况。</p>
       </div>
+      <a href="https://map.baidu.com/@12609384.2,2631450.58,12z" target="_blank">
       <img src="@/views/Guide/GuideCards/cardImage/guangzhou11.jpg" alt="广州交通路线图">
+      </a>
     </section>
   </div>
 </template>

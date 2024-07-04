@@ -9,51 +9,66 @@
         <p>成都，简称“蓉”，是四川省省会，中国西南地区重要的中心城市。</p>
         <p>成都以其悠久的历史、丰富的文化和美味的川菜而闻名。</p>
       </div>
-      <img :src="require('@/views/Guide/GuideCards/cardImage/1.jpg')" alt="成都">
+      <!-- 使用 <a> 标签包裹 <img> 标签，设置跳转链接 -->
+      <a href="https://cdwglj.chengdu.gov.cn/" target="_blank">
+        <img :src="require('@/views/Guide/GuideCards/cardImage/1.jpg')" alt="成都">
+      </a>
     </section>
 
-    <!-- 热门景点 -->
+<!-- 热门景点 -->
     <section class="section">
       <h2>热门景点</h2>
       <div class="grid-container">
         <div class="grid-item">
           <h3>武侯祠</h3>
+          <a href="https://www.wuhouci.net.cn/index.html" target="_blank">
           <img :src="require('@/views/Guide/GuideCards/cardImage/2.jpg')" alt="武侯祠">
+          </a>
           <div class="text-box">
             <p>武侯祠是一座纪念三国时期蜀汉丞相诸葛亮的祠庙，也是成都市内著名的古迹。</p>
           </div>
         </div>
         <div class="grid-item">
           <h3>宽窄巷子</h3>
+          <a href="https://www.mafengwo.cn/poi/87950.html" target="_blank">
           <img :src="require('@/views/Guide/GuideCards/cardImage/3.jpg')" alt="宽窄巷子">
+          </a>
           <div class="text-box">
             <p>宽窄巷子是成都著名的历史文化街区，有着典型的四川巴蜀民居风格。</p>
           </div>
         </div>
         <div class="grid-item">
           <h3>锦里古街</h3>
+          <a href="https://www.cdjinli.com/about/" target="_blank">
           <img :src="require('@/views/Guide/GuideCards/cardImage/4.jpg')" alt="锦里古街">
+          </a>
           <div class="text-box">
             <p>锦里是成都最具代表性的旅游景点之一，融合了古朴文化与现代商业。</p>
           </div>
         </div>
         <div class="grid-item">
           <h3>大熊猫基地</h3>
+          <a href="https://www.panda.org.cn/cn/about/introduction/" target="_blank">
           <img :src="require('@/views/Guide/GuideCards/cardImage/5.jpg')" alt="大熊猫基地">
+          </a>
           <div class="text-box">
             <p>成都大熊猫基地是中国乃至全球最著名的大熊猫繁育和保护中心。</p>
           </div>
         </div>
         <div class="grid-item">
           <h3>杜甫草堂</h3>
+          <a href="https://www.cddfct.com/" target="_blank">
           <img :src="require('@/views/Guide/GuideCards/cardImage/6.jpg')" alt="杜甫草堂">
+          </a>
           <div class="text-box">
             <p>杜甫草堂是唐代诗人杜甫的故居，保留了大量关于杜甫的文化遗产和历史遗迹。</p>
           </div>
         </div>
         <div class="grid-item">
           <h3>青城山</h3>
+          <a href="https://baike.baidu.com/item/%e9%9d%92%e5%9f%8e%e5%b1%b1/1512" target="_blank">
           <img :src="require('@/views/Guide/GuideCards/cardImage/7.jpg')" alt="青城山">
+          </a>
           <div class="text-box">
             <p>青城山位于成都市西南，是道教名山之一，以其险峻的山势和古朴的道观建筑闻名。</p>
           </div>
@@ -156,7 +171,9 @@
         <p>成都市内交通便利，可以乘坐地铁、公交或出租车。</p>
         <p>从成都双流国际机场到市中心约需40分钟。</p>
       </div>
+      <a href="https://map.baidu.com/@11585280.82,3555907.48,12z" target="_blank">
       <img :src="require('@/views/Guide/GuideCards/cardImage/8.jpg')" alt="成都交通路线图">
+      </a>
     </section>
   </div>
 </template>

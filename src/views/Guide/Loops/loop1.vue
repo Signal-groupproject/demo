@@ -114,7 +114,7 @@
         <p>大理市内交通便捷，可以乘坐公交车、出租车或租赁自行车出行。</p>
         <p>从大理机场到市中心约需30分钟车程。</p>
       </div>
-      <img :src="require('@/views/Guide/Loops/loopImages/dali10.jpg')" alt="大理交通路线图">
+      <img :src="require('@/views/Guide/Loops/loopImages/dali1.jpg')" alt="大理交通路线图">
     </section>
   </div>
 </template>
