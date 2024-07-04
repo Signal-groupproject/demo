@@ -110,7 +110,7 @@ export default {
   min-width: 300px; /* 确保块的最小宽度 */
   box-sizing: border-box;
   max-height: 300px; /* 设置最大高度 */
-  overflow: hidden; /* 确保内容超过时隐藏 */
+  overflow: auto; /* 确保内容超过时隐藏 */
   display: flex;
   flex-direction: column;
 }
