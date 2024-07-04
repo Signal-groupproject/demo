@@ -60,10 +60,10 @@ const guideCards = [
   {img: require('@/views/Guide/GuideCards/cardImage/shanghai3.jpg'), alt: 'GuideCard 2', text: '上海攻略', link: '/card2'},
   {img: require('@/views/Guide/GuideCards/cardImage/guangzhou1.jpg'), alt: 'GuideCard 3', text: '广州攻略', link: '/card3'},
   {img: require('@/views/Guide/GuideCards/cardImage/xiamen1.jpg'), alt: 'GuideCard 4', text: '厦门攻略', link: '/card4'},
-  {img: require('@/views/Guide/socialImages/guizhou.jpg'), alt: 'GuideCard 5', text: '贵州攻略', link: '/card5'},
-  {img: require('@/views/Guide/Loops/loopImages/beijing3.jpg'), alt: 'GuideCard 6', text: '北京攻略', link: '/loop3'},
-  {img: require('@/views/Guide/Loops/loopImages/chongqing1.jpg'), alt: 'GuideCard 7', text: '重庆攻略', link: '/loop2'},
-  {img: require('@/views/Guide/Loops/loopImages/dali.jpg'), alt: 'GuideCard 8', text: '大理攻略', link: '/loop1'},
+  {img: require('@/views/Guide/socialImages/guizhou.jpg'), alt: 'GuideCard 5', text: '长沙攻略', link: '/card5'},
+  {img: require('@/views/Guide/Loops/loopImages/beijing3.jpg'), alt: 'GuideCard 6', text: '重庆攻略', link: '/card6'},
+  {img: require('@/views/Guide/Loops/loopImages/chongqing1.jpg'), alt: 'GuideCard 7', text: '武汉攻略', link: '/card7'},
+  {img: require('@/views/Guide/Loops/loopImages/dali.jpg'), alt: 'GuideCard 8', text: '杭州攻略', link: '/card8'},
 ];
 
 const guideSearchQuery = ref('');
