@@ -110,7 +110,8 @@ export default {
   font-weight: bold;
   color: #52bdf6;
   text-align: center;
-  margin-bottom: 20px;
+  margin-top: 30px;
+  margin-bottom: 30px;
 }
 
 .sub-title {
