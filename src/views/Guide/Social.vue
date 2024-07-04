@@ -1,45 +1,44 @@
 <template>
   <div class="social">
     <!-- 页面背景 -->
-    <div class="page-background"></div>
+    <div class="socialPageBackground"></div>
 
     <!-- 搜索框区域 -->
-    <div class="search-container">
-      <el-input v-model="searchQuery" placeholder="搜索你想去的地名或群号" class="search-input"></el-input>
+    <div class="socialSearchContainer">
+      <el-input v-model="socialSearchQuery" placeholder="搜索你想去的地名或群号" class="socialSearchInput"></el-input>
     </div>
 
     <!-- 搜索结果显示 -->
-    <div v-if="searchResults.length" class="search-results">
-      <p v-for="result in searchResults" :key="result" class="result-item">
+    <div v-if="socialSearchResults.length" class="socialSearchResults">
+      <p v-for="result in socialSearchResults" :key="result" class="socialResultItem">
         {{ result }}
       </p>
     </div>
 
     <!-- 卡片区域 -->
-    <div class="card-container">
-      <div v-for="(image, index) in filteredImages" :key="index" class="card" @mouseover="handleMouseOver(index)" @mouseleave="handleMouseLeave">
-        <div class="card-image">
-          <img :src="image.src" alt="Card Image">
+    <div v-if="!socialSearchResults.length" class="socialCardContainer">
+      <div v-for="(socialImage, index) in socialFilteredImages" :key="index" class="socialCard" @mouseover="socialHandleMouseOver(index)" @mouseleave="socialHandleMouseLeave">
+        <div class="socialCardImage">
+          <img :src="socialImage.src" alt="Card Image">
           <!-- 鼠标悬停时显示群号 -->
-          <div v-if="infoIndex === index" class="group-info">
-            <div class="info-text">
-              {{ image.info }}
+          <div v-if="socialInfoIndex === index" class="socialGroupInfo">
+            <div class="socialInfoText">
+              {{ socialImage.info }}
             </div>
-            <el-button type="text" class="copy-button" @click="copyInfo(image.info)">复制</el-button>
+            <el-button type="text" class="socialCopyButton" @click="socialCopyInfo(socialImage.info)">复制</el-button>
           </div>
         </div>
-        <div class="card-title" contenteditable="true">
-          {{ image.topLeftInfo }}
+        <div class="socialCardTitle" contenteditable="true">
+          {{ socialImage.topLeftInfo }}
         </div>
       </div>
     </div>
 
     <!-- 底部网站信息 -->
-    <footer class="footer">
+    <footer class="socialFooter">
       <p>这里是QQMaiMaiBu好玩到爆旅游攻略社交群</p>
     </footer>
   </div>
-
 </template>
 
 <script>
@@ -47,9 +46,9 @@ export default {
   name: 'Social',
   data() {
     return {
-      searchQuery: '',
-      searchResults: [],
-      images: [
+      socialSearchQuery: '',
+      socialSearchResults: [],
+      socialImages: [
         { src: require('@/views/Guide/socialImages/fujian.jpg'), info: '群号：123456', topLeftInfo: '福建' },
         { src: require('@/views/Guide/socialImages/guangdong.jpg'), info: '群号：234567', topLeftInfo: '广东' },
         { src: require('@/views/Guide/socialImages/zhejiang.jpg'), info: '群号：345678', topLeftInfo: '浙江' },
@@ -60,30 +59,42 @@ export default {
         { src: require('@/views/Guide/socialImages/guangxi.jpg'), info: '群号：890123', topLeftInfo: '广西' },
         { src: require('@/views/Guide/socialImages/hunan.jpg'), info: '群号：901234', topLeftInfo: '湖南' }
       ],
-      infoIndex: -1,
-      searchClicked: false // 标记搜索按钮是否点击过
+      socialInfoIndex: -1,
+      socialSearchClicked: false // 标记搜索按钮是否点击过
     };
   },
   computed: {
-    filteredImages() {
-      if (this.searchQuery.trim() === '') {
-        return this.images;
+    socialFilteredImages() {
+      if (this.socialSearchQuery.trim() === '') {
+        return this.socialImages;
       } else {
-        const query = this.searchQuery.toLowerCase();
-        return this.images.filter(image =>
-            image.info.toLowerCase().includes(query) || image.topLeftInfo.toLowerCase().includes(query)
+        const query = this.socialSearchQuery.toLowerCase();
+        return this.socialImages.filter(socialImage =>
+            socialImage.info.toLowerCase().includes(query) || socialImage.topLeftInfo.toLowerCase().includes(query)
         );
+      }
+    },
+    socialSearchResults() {
+      if (this.socialSearchQuery.trim() === '') {
+        return [];
+      } else {
+        const query = this.socialSearchQuery.toLowerCase();
+        return this.socialImages
+            .filter(socialImage =>
+                socialImage.info.toLowerCase().includes(query) || socialImage.topLeftInfo.toLowerCase().includes(query)
+            )
+            .map(socialImage => socialImage.topLeftInfo);
       }
     }
   },
   methods: {
-    handleMouseOver(index) {
-      this.infoIndex = index;
+    socialHandleMouseOver(index) {
+      this.socialInfoIndex = index;
     },
-    handleMouseLeave() {
-      this.infoIndex = -1;
+    socialHandleMouseLeave() {
+      this.socialInfoIndex = -1;
     },
-    copyInfo(info) {
+    socialCopyInfo(info) {
       // 创建一个临时textarea元素用于复制文本
       const textarea = document.createElement('textarea');
       textarea.value = info;
@@ -101,7 +112,7 @@ export default {
 
 <style scoped>
 /* 页面背景样式 */
-.page-background {
+.socialPageBackground {
   position: fixed;
   top: 0;
   left: 0;
@@ -113,7 +124,7 @@ export default {
 }
 
 /* 搜索框区域样式 */
-.search-container {
+.socialSearchContainer {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -125,17 +136,17 @@ export default {
   padding: 20px;
 }
 
-.search-input {
+.socialSearchInput {
   width: 300px;
   margin-right: 10px;
 }
 
-.search-results {
+.socialSearchResults {
   margin-top: 20px;
   text-align: center;
 }
 
-.result-item {
+.socialResultItem {
   padding: 10px;
   border: 1px solid #ccc;
   margin-bottom: 5px;
@@ -143,25 +154,15 @@ export default {
   width: calc(100% - 40px);
 }
 
-.footer {
+.socialFooter {
   background-color: #f0f0f0;
   padding: 20px;
   text-align: center;
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  width: 70%;
 }
 
-.footer p {
-  margin: 0;
-  color: #333;
-  font-size: 16px;
-  font-weight: bold;
-}
 
 /* 卡片样式 */
-.card-container {
+.socialCardContainer {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   justify-items: center;
@@ -170,7 +171,7 @@ export default {
   margin-bottom: 80px;
 }
 
-.card {
+.socialCard {
   width: 200px;
   cursor: pointer;
   transition: transform 0.3s ease-in-out;
@@ -178,26 +179,26 @@ export default {
   border-radius: 10px; /* 圆角 */
 }
 
-.card:hover {
+.socialCard:hover {
   transform: scale(1.1);
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.card-image {
+.socialCardImage {
   width: 100%;
   height: 150px;
   position: relative;
   overflow: hidden;
 }
 
-.card-image img {
+.socialCardImage img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   border-radius: 10px; /* 圆角 */
 }
 
-.group-info {
+.socialGroupInfo {
   position: absolute;
   top: 0;
   left: 0;
@@ -213,11 +214,11 @@ export default {
   z-index: 10;
 }
 
-.card:hover .group-info {
+.socialCard:hover .socialGroupInfo {
   opacity: 1; /* 鼠标悬停时显示 */
 }
 
-.info-text {
+.socialInfoText {
   font-size: 14px;
   padding: 10px;
 }
