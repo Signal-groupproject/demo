@@ -39,7 +39,7 @@ export default {
     return {
       searchQuery: '',
       searchResults: [],
-      backgroundImage: require('@/views/Guide/socialImages/about_top.jpg'), // 背景图片路径
+      backgroundImage: require('@/views/Guide/socialImages/guangxi.jpg'), // 背景图片路径
       images: [
         { src: require('@/views/Guide/socialImages/fujian.jpg'), info: '群号：123456', topLeftInfo: '福建' },
         { src: require('@/views/Guide/socialImages/guangdong.jpg'), info: '群号：234567', topLeftInfo: '广东' },
