@@ -1,23 +1,17 @@
 <template>
   <div class="full-height">
     <div class="header">
-      <h1>小曦 AI Chat</h1>
+      <h1>AI Chat</h1>
     </div>
-    <div class="chat-container" ref="chatContainer">
+    <div class="chat-container">
       <div class="chat-box" ref="chatLog">
         <div v-for="(message, index) in messages" :key="index" :class="{'user-message': message.type === 'user', 'bot-message': message.type === 'bot'}">
           <div v-if="message.type === 'user'" class="message user-message">
             <div class="message-content">
               <div class="message-text">{{ message.content }}</div>
-              <div class="avatar">
-                <img src="user_avatar.png" alt="User Avatar">
-              </div>
             </div>
           </div>
           <div v-else class="message bot-message">
-            <div class="avatar">
-              <img src="ai_avatar.png" alt="AI Avatar">
-            </div>
             <div class="message-content">
               <div class="message-text">{{ message.content }}</div>
             </div>
@@ -70,7 +64,7 @@ export default {
     },
     scrollToBottom() {
       this.$nextTick(() => {
-        this.$refs.chatContainer.scrollTop = this.$refs.chatContainer.scrollHeight;
+        this.$refs.chatLog.scrollTop = this.$refs.chatLog.scrollHeight;
       });
     }
   }
@@ -82,6 +76,7 @@ body, html {
   margin: 0;
   padding: 0;
   height: 100%;
+  overflow: hidden; /* 隐藏整个页面的滚动条 */
 }
 
 .full-height {
@@ -99,20 +94,14 @@ body, html {
 
 .chat-container {
   flex: 1;
-  overflow-y: auto;
+  overflow-y: auto; /* 允许chat-box的垂直滚动条 */
   padding: 20px;
   background-color: white;
-  max-height: calc(100vh - 160px);
-}
-
-.chat-container::-webkit-scrollbar {
-  display: none; /* Chrome 和 Safari 隐藏滚动条 */
+  max-height: calc(100vh - 160px); /* 设置chat-container的最大高度 */
 }
 
 .chat-box {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
+  overflow-y: auto; /* 允许chat-box的垂直滚动条 */
 }
 
 .message {
