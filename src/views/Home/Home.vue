@@ -148,8 +148,8 @@ export default {
           src: require('./image/古格王国遗址.png'),
           options: [
             { label: '打铁花', value: 'option4' },
-            { label: '游玩方式', value: 'option5' },
-            { label: '发展前景', value: 'option6' }
+            { label: '川剧变脸', value: 'option5' },
+            { label: '', value: 'option6' }
           ]
         },
         {

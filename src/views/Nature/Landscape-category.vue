@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <h1 class="title">自然<span>景观</span>之旅</h1>
+    <h1 class="Dtitle">自然<span>景观</span>之旅</h1>
     <div class="content">
       <div class="intro-content">
         探索地球的美丽角落，感受大自然的神奇魅力！<br>
@@ -105,10 +105,10 @@ export default {
   text-align: center;
 }
 
-.title {
+.Dtitle {
   font-size: 46px;
   font-weight: bold;
-  color: #333;
+  color: #52bdf6;
   text-align: center;
   margin-bottom: 20px;
 }
@@ -134,6 +134,7 @@ export default {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  margin-left: 200px;
 }
 
 .image-item {
