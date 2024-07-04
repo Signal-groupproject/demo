@@ -112,7 +112,7 @@
           <h3>服务优化</h3>
           <ul>
             <li @click="showQandA('问题解答')">问题解答</li>
-            <li @click="showAdvice('游客意见')">游客意见</li>
+            <li @click="showAdvice('文化活动')">文化活动</li>
             <li @click="improveExperience('优化体验')">优化体验</li>
 
           </ul>

@@ -109,7 +109,7 @@ export default {
 }
 
 .food-container {
-  max-width: 1120px;
+  max-width: 1200px;
   margin: 0 auto;
   padding: 20px;
   background: url('~@/pictures/travel pic/background.jpg');

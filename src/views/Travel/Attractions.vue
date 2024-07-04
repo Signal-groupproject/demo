@@ -1,17 +1,22 @@
 <template>
-  <div class="card-container">
-    <div v-for="(item, index) in data" :key="index" class="card">
-      <div class="card-image">
-        <a :href="item.href" target="_blank">
-          <img :src="item.img_href" alt="景点图片">
-        </a>
-      </div>
-      <div class="card-content">
-        <h3 class="card-title">{{ item.title }}</h3>
-        <p class="card-description">{{ item.describe }}</p>
-        <p class="card-position">{{ item.position }}</p>
-        <div class="card-rating">
-          <span class="score">{{ item.score }}</span>
+  <div class="recommendations">
+    <div class="header">
+      <h2>景点推荐</h2>
+    </div>
+    <div class="card-container">
+      <div v-for="(item, index) in data" :key="index" class="card">
+        <div class="card-image">
+          <a :href="item.href" target="_blank">
+            <img :src="item.img_href" alt="景点图片">
+          </a>
+        </div>
+        <div class="card-content">
+          <h3 class="card-title">{{ item.title }}</h3>
+          <p class="card-description">{{ item.describe }}</p>
+          <p class="card-position">{{ item.position }}</p>
+          <div class="card-rating">
+            <span class="score">{{ item.score }}</span>
+          </div>
         </div>
       </div>
     </div>
@@ -19,11 +24,29 @@
 </template>
 
 <style scoped>
+.recommendations {
+  padding: 20px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.header h2 {
+  background-color: black;
+  color: white;
+  padding: 10px 20px;
+  border: 2px solid white;
+  border-radius: 5px;
+}
+
 .card-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   gap: 20px;
-  padding: 20px;
 }
 
 .card {
@@ -65,7 +88,7 @@
 
 .card-position {
   color: #999999;
-  font-size: 20px;
+  font-size: 14px;
   margin-bottom: 10px;
 }
 
@@ -84,18 +107,10 @@
 </style>
 
 <script>
-
 export default {
-  name: 'test',
-
-  methods: {
-    hello () {
-
-    }
-  },
-  data () {
+  data() {
     return {
-      required: true,
+      searchQuery: '',
       data: [
         {
           'title': '天坛5A',
@@ -258,8 +273,7 @@ export default {
           'score': '7.0'
         }
       ]
-    }
-  }
-}
-
+    };
+  },
+};
 </script>
