@@ -6,18 +6,20 @@
       <input type="text" placeholder="请输入搜索内容">
       <button @click="search">搜索</button>
     </div>
-    <div class="card-grid">
-      <div
-          v-for="(card, index) in cards"
-          :key="index"
-          class="card"
-          @mouseover="showEnlarge(index)"
-          @mouseleave="hideEnlarge(index)"
-          @click="handleCardClick(card)"
-      >
-        <div class="card-content">
-          <img :src="card.img" :alt="card.alt">
-          <p>{{ card.text }}</p>
+    <div class="card-container">
+      <div class="card-grid">
+        <div
+            v-for="(card, index) in cards"
+            :key="index"
+            class="card"
+            @mouseover="showEnlarge(index)"
+            @mouseleave="hideEnlarge(index)"
+            @click="handleCardClick(card)"
+        >
+          <div class="card-content">
+            <img :src="card.img" :alt="card.alt">
+            <p>{{ card.text }}</p>
+          </div>
         </div>
       </div>
     </div>
@@ -106,6 +108,16 @@ function hideEnlarge() {
   margin-right: auto; /* 水平居中 */
 }
 
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  justify-items: center;
+  gap: 40px;
+  /* 水平居中 */
+  margin: 20px auto;
+  max-width: 1200px; /* 设置最大宽度 */
+}
+
 .card {
   width: 230px; /* 调整卡片宽度 */
   height: 200px; /* 调整卡片高度 */
@@ -134,6 +146,7 @@ function hideEnlarge() {
   max-height: 70%;
   object-fit: cover;
   border-bottom: 1px solid #ccc;
+  border-radius: 10px; /* 圆角 */
 }
 
 .card p {

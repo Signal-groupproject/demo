@@ -171,8 +171,9 @@ export default {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   justify-items: center;
-  gap: 20px;
+  gap: 40px;
   margin-top: 20px;
+  margin-bottom: 80px;
 }
 
 .card {
@@ -185,7 +186,7 @@ export default {
 
 .card:hover {
   transform: scale(1.1);
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* 悬停时添加阴影效果 */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .card-image {
