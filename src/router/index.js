@@ -28,6 +28,30 @@ import Hprospect from "@/views/Home/Historical-heritage/Hprospect.vue";
 import Cuisine from "@/views/Home/Delicacy/Cuisine.vue";
 import MustEat from "@/views/Home/Delicacy/MustEat.vue";
 import Dprospect from "@/views/Home/Delicacy/Dprospect.vue";
+import city from '../views/City/city.vue';
+import Shanghai from '../views/City/Shanghai.vue';
+import Beijing from "@/views/City/Beijing.vue";
+import Fujian from "@/views/City/Fujian.vue";
+import Hainan from "@/views/City/Hainan.vue";
+import Hangzhou from "@/views/City/Hangzhou.vue";
+import Guangzhou from "@/views/City/Guangzhou.vue";
+import Wuhan from "@/views/City/Wuhan.vue";
+import Changsha from "@/views/City/Changsha.vue";
+import Guangdong from '../views/City/Guangdong.vue';
+import Liaoning from "@/views/City/Liaoning.vue";
+import Xinjiang from "@/views/City/Xinjiang.vue";
+import Xizang from "@/views/City/Xizang.vue";
+import Gansu from "@/views/City/Gansu.vue";
+import Qinghai from "@/views/City/Qinghai.vue";
+import Sichuan from "@/views/City/Sichuan.vue";
+import Jiangxi from "@/views/City/Jiangxi.vue";
+import Anhui from "@/views/City/Anhui.vue";
+import Heilongjiang from "@/views/City/Heilongjiang.vue";
+import Hebei from "@/views/City/Hebei.vue";
+import Henan from "@/views/City/Henan.vue";
+import Hubei from "@/views/City/Hubei.vue";
+import Hunan from "@/views/City/Hunan.vue";
+import Jilin from "@/views/City/Jilin.vue";
 Vue.use(VueRouter);
 
 const routes = [
@@ -71,6 +95,126 @@ const routes = [
         component: () => import('../views/Travel/Food.vue'),
       },
       {
+        path: '/city',
+        name: 'City',
+        component: () => import('../views/City/city.vue'),
+      },
+      {
+        path: '/city',
+        name: 'City',
+        component: () => import('../views/City/Shanghai.vue'),
+      },
+      {
+        path: '/city',
+        name: 'City',
+        component: () => import('../views/City/Beijing.vue'),
+      },
+      {
+        path: '/city',
+        name: 'City',
+        component: () => import('../views/City/Fujian.vue'),
+      },
+      {
+        path: '/city',
+        name: 'City',
+        component: () => import('../views/City/Hainan.vue'),
+      },
+      {
+        path: '/city',
+        name: 'City',
+        component: () => import('../views/City/Hangzhou.vue'),
+      },
+      {
+        path: '/city',
+        name: 'City',
+        component: () => import('../views/City/Guangzhou.vue'),
+      },
+      {
+        path: '/city',
+        name: 'City',
+        component: () => import('../views/City/Wuhan.vue'),
+      },
+      {
+        path: '/city',
+        name: 'City',
+        component: () => import('../views/City/Changsha.vue'),
+      },
+      {
+        path: '/city',
+        name: 'City',
+        component: () => import('../views/City/Guangdong.vue'),
+      },
+      {
+        path: '/city',
+        name: 'City',
+        component: () => import('../views/City/Liaoning.vue'),
+      },
+      {
+        path: '/city',
+        name: 'City',
+        component: () => import('../views/City/Xinjiang.vue'),
+      },
+      {
+        path: '/city',
+        name: 'City',
+        component: () => import('../views/City/Xizang.vue'),
+      },
+      {
+        path: '/city',
+        name: 'City',
+        component: () => import('../views/City/Gansu.vue'),
+      },
+      {
+        path: '/city',
+        name: 'City',
+        component: () => import('../views/City/Qinghai.vue'),
+      },
+      {
+        path: '/city',
+        name: 'City',
+        component: () => import('../views/City/Sichuan.vue'),
+      },
+      {
+        path: '/city',
+        name: 'City',
+        component: () => import('../views/City/Jiangxi.vue'),
+      },
+      {
+        path: '/city',
+        name: 'City',
+        component: () => import('../views/City/Anhui.vue'),
+      },
+      {
+        path: '/city',
+        name: 'City',
+        component: () => import('../views/City/Heilongjiang.vue'),
+      },
+      {
+        path: '/city',
+        name: 'City',
+        component: () => import('../views/City/Hebei.vue'),
+      },
+      {
+        path: '/city',
+        name: 'City',
+        component: () => import('../views/City/Henan.vue'),
+      },
+      {
+        path: '/city',
+        name: 'City',
+        component: () => import('../views/City/Hubei.vue'),
+      },
+      {
+        path: '/city',
+        name: 'City',
+        component: () => import('../views/City/Hunan.vue'),
+      },
+      {
+        path: '/city',
+        name: 'City',
+        component: () => import('../views/City/Jilin.vue'),
+      },
+      {
         path: '/AnswerPage',
         name: 'AnswerPage',
         component: AnswerPage,
@@ -94,6 +238,126 @@ const routes = [
         path: '/travel/food', // 新增
         name: 'Food',
         component: Food,
+      },
+            {
+        path: '/city/city', // 新增
+        name: 'city',
+        component: city,
+      },
+      {
+        path: '/city/shanghai', // 新增
+        name: 'Shanghai',
+        component: Shanghai,
+      },
+      {
+        path: '/city/beijing', // 新增
+        name: 'Beijing',
+        component: Beijing,
+      },
+      {
+        path: '/city/fujian', // 新增
+        name: 'Fujian',
+        component: Fujian,
+      },
+      {
+        path: '/city/hainan', // 新增
+        name: 'Hainan',
+        component: Hainan,
+      },
+      {
+        path: '/city/hangzhou', // 新增
+        name: 'Hangzhou',
+        component: Hangzhou,
+      },
+      {
+        path: '/city/guangzhou', // 新增
+        name: 'Guangzhou',
+        component: Guangzhou,
+      },
+      {
+        path: '/city/wuhan', // 新增
+        name: 'Wuhan',
+        component: Wuhan,
+      },
+      {
+        path: '/city/changsha', // 新增
+        name: 'Changsha',
+        component: Changsha,
+      },
+      {
+        path: '/city/guangdong', // 新增
+        name: 'Guangdong',
+        component: Guangdong,
+      },
+      {
+        path: '/city/liaoning', // 新增
+        name: 'Liaoning',
+        component: Liaoning,
+      },
+      {
+        path: '/city/xinjiang', // 新增
+        name: 'Xinjiang',
+        component: Xinjiang,
+      },
+      {
+        path: '/city/xizang', // 新增
+        name: 'Xizang',
+        component: Xizang,
+      },
+      {
+        path: '/city/gansu', // 新增
+        name: 'Gansu',
+        component: Gansu,
+      },
+      {
+        path: '/city/qinghai', // 新增
+        name: 'Qinghai',
+        component: Qinghai,
+      },
+      {
+        path: '/city/sichuan', // 新增
+        name: 'Sichuan',
+        component: Sichuan,
+      },
+      {
+        path: '/city/jiangxi', // 新增
+        name: 'Jiangxi',
+        component: Jiangxi,
+      },
+      {
+        path: '/city/anhui', // 新增
+        name: 'Anhui',
+        component: Anhui,
+      },
+      {
+        path: '/city/heilongjiang', // 新增
+        name: 'Heilongjiang',
+        component: Heilongjiang,
+      },
+      {
+        path: '/city/hebei', // 新增
+        name: 'Hebei',
+        component: Hebei,
+      },
+      {
+        path: '/city/henan', // 新增
+        name: 'Henan',
+        component: Henan,
+      },
+      {
+        path: '/city/hubei', // 新增
+        name: 'Hubei',
+        component: Hubei,
+      },
+      {
+        path: '/city/hunan', // 新增
+        name: 'Hunan',
+        component: Hunan,
+      },
+      {
+        path: '/city/jilin', // 新增
+        name: 'Jilin',
+        component: Jilin,
       },
       {
         path: '/social',
