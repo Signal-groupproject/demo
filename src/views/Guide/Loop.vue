@@ -30,6 +30,11 @@ function handleClick(item) {
   width: 100%;
   height: 100%;
   object-fit: cover; /* 保持图片比例填充，不拉伸变形 */
+  transition: transform 0.3s ease-in-out; /* 平滑过渡效果 */
+}
+
+.el-carousel__item:hover .carousel-image {
+  transform: scale(1.05); /* 放大效果 */
 }
 
 .carousel-caption {
