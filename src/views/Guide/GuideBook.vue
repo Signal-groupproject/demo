@@ -4,7 +4,7 @@
 
     <!-- 搜索框区域 -->
     <div class="search-container">
-      <el-input v-model="searchQuery" placeholder="请输入搜索内容" class="search-input"></el-input>
+      <el-input v-model="searchQuery" placeholder="请输入你想去的地名" class="search-input"></el-input>
     </div>
 
     <!-- 搜索结果显示 -->
