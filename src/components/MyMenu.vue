@@ -16,7 +16,7 @@
         <el-menu-item index="/news">文旅新闻</el-menu-item>
         <el-menu-item index="/map">地图搜索</el-menu-item>
         <el-menu-item index="/spots">旅游景区</el-menu-item>
-        <el-menu-item index="/spots">旅游景区</el-menu-item>
+        <el-menu-item index="/ai">AI Chat</el-menu-item>
       </el-submenu>
 
       <el-submenu index="/guide">
