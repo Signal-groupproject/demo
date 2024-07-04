@@ -1,7 +1,7 @@
 <template>
   <div class="city-guide">
     <h1>成都旅游攻略</h1>
-    
+
     <!-- 成都概述 -->
     <section class="section">
       <h2>成都概述</h2>
@@ -11,7 +11,7 @@
       </div>
       <img :src="require('@/views/Guide/GuideCards/cardImage/1.jpg')" alt="成都">
     </section>
-    
+
     <!-- 热门景点 -->
     <section class="section">
       <h2>热门景点</h2>
@@ -60,7 +60,7 @@
       </div>
       </div>
     </section>
-    
+
     <!-- 美食推荐 -->
     <section class="section">
       <h2>美食推荐</h2>
@@ -88,11 +88,11 @@
         </div>
       </div>
     </section>
-    
+
     <section class="section">
   <h2>旅游路线推荐</h2>
   <div class="text-box">
-  
+
     <!-- 文化古迹游 -->
     <h3>1. 文化古迹游</h3>
     <p><strong>第一天</strong></p>
@@ -177,7 +177,7 @@
 
   </div>
 </section>
-    
+
     <!-- 交通信息 -->
     <section class="section">
       <h2>交通信息</h2>

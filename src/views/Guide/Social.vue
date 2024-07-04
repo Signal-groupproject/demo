@@ -39,17 +39,17 @@ export default {
     return {
       searchQuery: '',
       searchResults: [],
-      backgroundImage: require('@/pictures/page1/about_top.jpg'), // 背景图片路径
+      backgroundImage: require('@/views/Guide/socialImages/about_top.jpg'), // 背景图片路径
       images: [
-        { src: require('@/pictures/page1/about_top.jpg'), info: '群号：123456', topLeftInfo: '福建' },
-        { src: require('@/pictures/page1/about_top.jpg'), info: '群号：234567', topLeftInfo: '广东' },
-        { src: require('@/pictures/page1/about_top.jpg'), info: '群号：345678', topLeftInfo: '浙江' },
-        { src: require('@/pictures/page1/about_top.jpg'), info: '群号：456789', topLeftInfo: '贵州' },
-        { src: require('@/pictures/page1/about_top.jpg'), info: '群号：567890', topLeftInfo: '四川' },
-        { src: require('@/pictures/page1/about_top.jpg'), info: '群号：678901', topLeftInfo: '云南' },
-        { src: require('@/pictures/page1/about_top.jpg'), info: '群号：789012', topLeftInfo: '重庆' },
-        { src: require('@/pictures/page1/about_top.jpg'), info: '群号：890123', topLeftInfo: '广西' },
-        { src: require('@/pictures/page1/about_top.jpg'), info: '群号：901234', topLeftInfo: '湖南' }
+        { src: require('@/views/Guide/socialImages/fujian.jpg'), info: '群号：123456', topLeftInfo: '福建' },
+        { src: require('@/views/Guide/socialImages/guangdong.jpg'), info: '群号：234567', topLeftInfo: '广东' },
+        { src: require('@/views/Guide/socialImages/zhejiang.jpg'), info: '群号：345678', topLeftInfo: '浙江' },
+        { src: require('@/views/Guide/socialImages/guizhou.jpg'), info: '群号：456789', topLeftInfo: '贵州' },
+        { src: require('@/views/Guide/socialImages/sichuan.jpg'), info: '群号：567890', topLeftInfo: '四川' },
+        { src: require('@/views/Guide/socialImages/yunnan.jpg'), info: '群号：678901', topLeftInfo: '云南' },
+        { src: require('@/views/Guide/socialImages/chongqing.jpg'), info: '群号：789012', topLeftInfo: '重庆' },
+        { src: require('@/views/Guide/socialImages/guangxi.jpg'), info: '群号：890123', topLeftInfo: '广西' },
+        { src: require('@/views/Guide/socialImages/hunan.jpg'), info: '群号：901234', topLeftInfo: '湖南' }
       ],
       infoIndex: -1,
       searchClicked: false // 标记搜索按钮是否点击过
@@ -76,6 +76,9 @@ export default {
     },
     showInfo(index) {
       this.infoIndex = index;
+    },
+    hideInfo() {
+      this.infoIndex = -1;
     },
     copyToClipboard(info) {
       navigator.clipboard.writeText(info)
@@ -134,15 +137,17 @@ export default {
 .image-item {
   position: relative;
   overflow: hidden;
-  max-width: 100%; /* 图片最大宽度 */
-  height: 100%; /* 图片高度 */
+  transition: transform 0.3s ease; /* 添加过渡效果 */
+}
+
+.image-item:hover {
+  transform: scale(1.05); /* 悬停时放大 */
 }
 
 .image-item img {
   width: 100%;
   height: auto;
   display: block;
-  transition: transform 0.3s ease;
 }
 
 .info-box {
