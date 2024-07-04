@@ -104,8 +104,8 @@ function handleCardClick(guideCard) {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   justify-items: center;
-  gap: 40px;
-  margin: 20px auto;
+  gap: 20px;
+  margin: auto;
   max-width: 1200px;
 }
 
@@ -113,15 +113,13 @@ function handleCardClick(guideCard) {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 40px;
-  margin-top: 10px;
-  margin-bottom: 40px; /* 增加底部间隔 */
+  /* 增加底部间隔 */
   max-width: 1000px; /* 设置最大宽度 */
-  margin-left: auto; /* 水平居中 */
-  margin-right: auto; /* 水平居中 */
+  margin: 10px auto 40px;
 }
 
 .guideCard {
-  width: 230px; /* 调整卡片宽度 */
+  width: 255px; /* 调整卡片宽度 */
   height: 200px; /* 调整卡片高度 */
   text-align: center;
   border: 1px solid #ccc;
