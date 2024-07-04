@@ -1,15 +1,35 @@
 <template>
-  <div class="container">
-    <h1>小曦 AI Chat</h1>
-    <div id="chatLog" ref="chatLog">
-      <div v-for="(message, index) in messages" :key="index">
-        <strong>你:</strong> {{ message.user }}<br>
-        <strong>小曦:</strong> {{ message.bot }}<br>
+  <div class="full-height">
+    <div class="header">
+      <h1>小曦 AI Chat</h1>
+    </div>
+    <div class="chat-container" ref="chatContainer">
+      <div class="chat-box" ref="chatLog">
+        <div v-for="(message, index) in messages" :key="index" :class="{'user-message': message.type === 'user', 'bot-message': message.type === 'bot'}">
+          <div v-if="message.type === 'user'" class="message user-message">
+            <div class="message-content">
+              <div class="message-text">{{ message.content }}</div>
+              <div class="avatar">
+                <img src="user_avatar.png" alt="User Avatar">
+              </div>
+            </div>
+          </div>
+          <div v-else class="message bot-message">
+            <div class="avatar">
+              <img src="ai_avatar.png" alt="AI Avatar">
+            </div>
+            <div class="message-content">
+              <div class="message-text">{{ message.content }}</div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
-    <input v-model="inputText" @keyup.enter="sendChat" placeholder="输入您的消息">
-    <button @click="sendChat">发送</button>
-    <button @click="clearChat">清空聊天记录</button>
+    <div class="input-container">
+      <input v-model="inputText" @keyup.enter="sendChat" placeholder="输入您的消息">
+      <button @click="sendChat">发送</button>
+      <button @click="clearChat">清空聊天记录</button>
+    </div>
   </div>
 </template>
 
@@ -28,29 +48,29 @@ export default {
       if (this.inputText.trim() === '') return;
 
       const userMessage = this.inputText;
-      this.messages.push({ user: userMessage, bot: '' });
+      this.messages.push({ type: 'user', content: userMessage });
+      this.scrollToBottom();
 
-      axios.post('https://aichat.api.ecylt.top', {q: userMessage})
-          .then(response => {
-            const botResponse = response.data.response.response;
-            this.messages[this.messages.length - 1].bot = botResponse;
-            this.scrollToBottom();
-          })
-          .catch(error => {
-            console.error('Error:', error);
-            this.messages[this.messages.length - 1].bot = '对不起，服务器出错了。';
-            this.scrollToBottom();
-          });
+      axios.post('https://aichat-wbots-1-32-mini.api.ecylt.top/', { q: userMessage })
+        .then(response => {
+          const botResponse = response.data.response.response;
+          this.messages.push({ type: 'bot', content: botResponse });
+          this.scrollToBottom();
+        })
+        .catch(error => {
+          console.error('Error:', error);
+          this.messages.push({ type: 'bot', content: '对不起，服务器出错了。' });
+          this.scrollToBottom();
+        });
 
       this.inputText = '';
     },
     clearChat() {
       this.messages = [];
-      this.$refs.chatLog.scrollTop = 0;
     },
     scrollToBottom() {
       this.$nextTick(() => {
-        this.$refs.chatLog.scrollTop = this.$refs.chatLog.scrollHeight;
+        this.$refs.chatContainer.scrollTop = this.$refs.chatContainer.scrollHeight;
       });
     }
   }
@@ -58,58 +78,94 @@ export default {
 </script>
 
 <style scoped>
-body {
-  font-family: Arial, sans-serif;
+body, html {
   margin: 0;
   padding: 0;
-  background-color: #2c3e50;
-  color: #ecf0f1;
+  height: 100%;
 }
 
-.container {
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 20px;
-  background-color: #34495e;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-  border-radius: 10px;
-  margin-top: 50px;
+.full-height {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
-h1 {
+.header {
   text-align: center;
-  color: #bdc3c7;
+  padding: 20px;
+  background-color: #3498db;
+  color: white;
 }
 
-#chatLog {
-  margin-bottom: 20px;
-  padding: 10px;
-  border: 1px solid #546e7a;
-  border-radius: 5px;
-  background-color: #2c3e50;
-  height: 200px;
+.chat-container {
+  flex: 1;
   overflow-y: auto;
-  color: #ecf0f1;
+  padding: 20px;
+  background-color: white;
+  max-height: calc(100vh - 160px);
 }
 
-#chatLog::-webkit-scrollbar {
-  display: none; /* Chrome, Safari, Edge */
+.chat-container::-webkit-scrollbar {
+  display: none; /* Chrome 和 Safari 隐藏滚动条 */
 }
 
-#chatLog {
-  -ms-overflow-style: none; /* IE 和 Edge */
-  scrollbar-width: none; /* Firefox */
+.chat-box {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.message {
+  display: flex;
+  align-items: flex-start;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 70%;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.user-message {
+  justify-content: flex-end;
+  text-align: right;
+}
+
+.bot-message {
+  justify-content: flex-start;
+}
+
+.avatar {
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
+}
+
+.message-content {
+  background-color: #3498db;
+  color: white;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.input-container {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  background-color: #e5e5e5;
 }
 
 input {
-  width: calc(100% - 110px);
+  flex: 1;
   padding: 10px;
-  border: 1px solid #546e7a;
+  border: 1px solid #ccc;
   border-radius: 5px;
   margin-right: 10px;
   font-size: 16px;
-  background-color: #2c3e50;
-  color: #ecf0f1;
 }
 
 button {
@@ -120,7 +176,6 @@ button {
   border-radius: 5px;
   cursor: pointer;
   font-size: 16px;
-  margin-right: 10px;
 }
 
 button:hover {
