@@ -39,7 +39,8 @@ export default {
         this.map = new AMap.Map("container", {
           viewMode: "3D",
           zoom: 17,
-          scale:2
+          scale:2,
+          center:[118.0941,24.5754]
         });
       }).catch((e) => {
         console.log(e);
@@ -66,6 +67,7 @@ export default {
         navigator.geolocation.getCurrentPosition(
             (position) => {
               const {latitude, longitude} = position.coords;
+              console.log(position.coords);
               this.map.setCenter([longitude, latitude]);
             },
             (error) => {
