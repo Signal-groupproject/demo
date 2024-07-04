@@ -45,10 +45,10 @@ const cards = [
   {img: require('@/views/Guide/GuideCards/cardImage/shanghai3.jpg'), alt: 'Card 2', text: '上海攻略', link: '/card2'},
   {img: require('@/views/Guide/GuideCards/cardImage/guangzhou1.jpg'), alt: 'Card 3', text: '广州攻略', link: '/card3'},
   {img: require('@/views/Guide/GuideCards/cardImage/xiamen1.jpg'), alt: 'Card 4', text: '厦门攻略', link: '/card4'},
-  {img: require('@/views/Guide/socialImages/about_top.jpg'), alt: 'Card 5', text: 'Card 5 Description', link: '/card5'},
-  {img: require('@/views/Guide/socialImages/about_top.jpg'), alt: 'Card 6', text: 'Card 6 Description', link: '/card6'},
-  {img: require('@/views/Guide/socialImages/about_top.jpg'), alt: 'Card 7', text: 'Card 7 Description', link: '/card7'},
-  {img: require('@/views/Guide/socialImages/about_top.jpg'), alt: 'Card 8', text: 'Card 8 Description', link: '/card8'},
+  {img: require('@/views/Guide/GuideCards/cardImage/wuhan.jpg'), alt: 'Card 5', text: '武汉攻略', link: '/card5'},
+  {img: require('@/views/Guide/GuideCards/cardImage/changsha.jpg'), alt: 'Card 6', text: '长沙攻略', link: '/card6'},
+  {img: require('@/views/Guide/GuideCards/cardImage/hangzhou.jpg'), alt: 'Card 7', text: '杭州攻略', link: '/card7'},
+  {img: require('@/views/Guide/GuideCards/cardImage/hangzhou.jpg'), alt: 'Card 8', text: '重庆攻略', link: '/card8'},
 ];
 
 function handleCardClick(card) {
@@ -59,13 +59,6 @@ function handleCardClick(card) {
 function search() {
   // 实现搜索逻辑
   console.log('Perform search');
-}
-function showEnlarge(index) {
-  enlargeIndex = index;
-}
-
-function hideEnlarge() {
-  enlargeIndex = null;
 }
 </script>
 
