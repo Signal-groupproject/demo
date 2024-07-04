@@ -30,7 +30,7 @@
       <h1>魅力中国</h1>
       <div class="intro-container">
 
-        <div class="image-grid">
+        <div class="image-grid1">
           <div v-for="(image, index) in images" :key="index" class="image-item">
             <div class="image-container" @mouseenter="showOptions(index)" @mouseleave="hideOptions()">
               <img :src="image.src" alt="图片">
@@ -149,7 +149,7 @@ export default {
           options: [
             { label: '打铁花', value: 'option4' },
             { label: '川剧变脸', value: 'option5' },
-            { label: '', value: 'option6' }
+            { label: '秦腔', value: 'option6' }
           ]
         },
         {
@@ -275,7 +275,7 @@ export default {
   justify-content: center;
   align-items: center;
   max-width: 1800px;
-  margin: 0 auto;
+  margin-left: 30px;
 }
 
 .intro-content {
@@ -426,7 +426,7 @@ export default {
   color: #ff0000;
 }
 
-.image-grid {
+.image-grid1 {
   position: relative;
   display: flex;
   flex-wrap: wrap;

@@ -10,7 +10,7 @@
     </div>
 
     <h2 class="sub-title">国内六大经典地貌</h2>
-    <div class="image-grid">
+    <div class="image-grid2">
       <div v-for="(image, index) in images" :key="index" class="image-item">
         <img :src="image.url" @click="showImageName(index)" class="grid-image" alt="Image">
         <div v-if="image.showName" class="image-name">{{ image.name }}</div>
@@ -130,11 +130,11 @@ export default {
   font-weight: bold;
 }
 
-.image-grid {
+.image-grid2 {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  margin-left: 200px;
+  margin: auto;
 }
 
 .image-item {
