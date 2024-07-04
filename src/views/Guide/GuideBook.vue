@@ -33,7 +33,7 @@ import router from "@/router";
 
 const images = [
   {img: require('@/views/Guide/Loops/loopImages/dali.jpg'), link: '/loop1', caption:"大理"},
-  {img: require('@/pictures/page1/chongqing1.jpg'), link: '/loop2', caption:"重庆"},
+  {img: require('@/views/Guide/Loops/loopImages/chongqing1.jpg'), link: '/loop2', caption:"重庆"},
   {img: require('@/views/Guide/Loops/loopImages/beijing3.jpg'), link: '/loop3', caption: "北京"}
 ];
 
