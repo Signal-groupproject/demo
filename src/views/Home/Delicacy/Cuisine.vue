@@ -30,7 +30,7 @@
           </div>
 
           <div v-show="selectedOption === 'option2'" class="option-container">
-            <div class="content-row" v-for="index in 1" :key="index">
+            <div class="content-row" v-for="index in 2" :key="index">
               <div class="content-item">
                 <div class="content-left">
                   <img :src="getImageUrlForOption2(index)" :alt="'Image ' + index" style="max-width: 50%; height: auto;">
@@ -83,6 +83,10 @@ export default {
         [
           '烧鹅',
           '烧鹅是广东的一道传统美食，以鹅为主要食材，经过腌制、烤制等多道工序制作而成。外皮酥脆，肉质鲜嫩，风味独特。'
+        ],
+        [
+            '白切鸡',
+            '白切鸡是广东最为经典的家常菜之一，选用鸡整体或鸡块，经过煮熟后，撒上葱花，然后配以鸡油、酱油、姜汁等调料。白切鸡口感嫩滑，汤汁鲜美，是广东人餐桌上常见的美食之一。'
         ]
       ],
       linkUrls: [
@@ -93,7 +97,8 @@ export default {
         'link-url-5'
       ],
       linkUrlsForOption2: [
-        'https://baike.baidu.com/item/%E7%83%A7%E9%B9%85/9922'
+        'https://baike.so.com/doc/6544928-6758672.html',
+        'https://www.bilibili.com/video/BV1Y64y1W78H/'
       ],
       imagePaths: [
         require('./Dimage/佛跳墙.png'),
@@ -103,7 +108,8 @@ export default {
         require('./Dimage/漫长的季节.png')
       ],
       imagePathsForOption2: [
-        require('./Dimage/漫长的季节.png')
+        require('./Dimage/img_1.png'),
+        require('./Dimage/img_2.png')
       ],
     };
   },
