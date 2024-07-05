@@ -7,7 +7,7 @@
           <el-spinner></el-spinner>
         </div>
         <ul v-else>
-          <li v-for="item in bilibili_news.slice(0,7)" :key="item.id" class="news-item">
+          <li v-for="item in bilibili_news" :key="item.id" class="news-item">
             <a :href="item.url" target="_blank">{{ item.title }}</a>
             <span class="time">{{ formatDate(item.timestamp)}}</span>
           </li>
@@ -19,7 +19,7 @@
           <el-spinner></el-spinner>
         </div>
         <ul v-else>
-          <li v-for="item in newsItems.slice(0,8)" :key="item.id" class="news-item">
+          <li v-for="item in newsItems" :key="item.id" class="news-item">
             <a :href="item.url" target="_blank">{{ item.title }}</a>
             <span class="time">{{ item.ctime }}</span>
           </li>
@@ -31,7 +31,7 @@
           <el-spinner></el-spinner>
         </div>
         <ul v-else>
-          <li v-for="item in zhihu_news.slice(0,5)" :key="item.id" class="news-item">
+          <li v-for="item in zhihu_news" :key="item.id" class="news-item">
             <a :href="item.url" target="_blank">{{ item.title }}</a>
             <span class="time">{{ formatDate(item.timestamp)}}</span>
           </li>
@@ -43,7 +43,7 @@
           <el-spinner></el-spinner>
         </div>
         <ul v-else>
-          <li v-for="item in baidu_news.slice(0,8)" :key="item.id" class="news-item">
+          <li v-for="item in baidu_news" :key="item.id" class="news-item">
             <a :href="item.url" target="_blank">{{ item.title }}</a>
             <span class="time">{{ formatDate(item.timestamp)}}</span>
           </li>
@@ -55,7 +55,7 @@
           <el-spinner></el-spinner>
         </div>
         <ul v-else>
-          <li v-for="item in weibo_news.slice(0,8)" :key="item.id" class="news-item">
+          <li v-for="item in weibo_news" :key="item.id" class="news-item">
             <a :href="item.url" target="_blank">{{ item.title }}</a>
             <span class="time">{{ formatDate(item.timestamp)}}</span>
           </li>
@@ -67,7 +67,7 @@
           <el-spinner></el-spinner>
         </div>
         <ul v-else>
-          <li v-for="item in todays_news.slice(0,5)" :key="item.id" class="news-item">
+          <li v-for="item in todays_news" :key="item.id" class="news-item">
             <a :href="item.url" target="_blank">{{ item.title }}</a>
             <span class="time">{{ formatDate(item.timestamp)}}</span>
           </li>
@@ -102,8 +102,8 @@ export default {
         backgroundImage: this.backgroundImage,
         backgroundSize: 'cover', // 背景图片覆盖整个元素
         backgroundPosition: 'center', // 背景图片居中
-        height: '93.7vh', // 设置高度
-        width: '100vw' // 设置宽度，覆盖整个视口
+        height: '100%', // 设置高度
+        width: '100%' // 设置宽度，覆盖整个视口
       };
     }
   },
@@ -132,33 +132,33 @@ export default {
       return `${year}-${month}-${day}`;
     },
     // 获取新闻数据的方法
-    // async getNewsData() {
-    //   try {
-    //     const response = await this.$api.getNews(); // 调用接口获取数据
-    //     if (response.data.code === 200) {
-    //       this.newsItems = response.data.result.newslist; // 将新闻列表存储到组件数据中
-    //     } else {
-    //       console.error('获取新闻数据失败');
-    //     }
-    //   } catch (error) {
-    //     console.error('获取新闻数据异常', error);
-    //   } finally {
-    //     this.loading1 = false; // 数据加载完毕后，取消加载状态
-    //   }
-    // },
-    //新闻接口调用上限时，使用一下代码
-    getNewsData() {
-      setTimeout(() => { // 模拟异步请求
-        this.newsItems = [
-          { id: 1, title: '新闻标题1', url: 'https://www.example.com/news1', ctime: '2024-09-01' },
-          { id: 2, title: '新闻标题2', url: 'https://www.example.com/news2', ctime: '2024-09-01' },
-          { id: 3, title: '新闻标题3', url: 'https://www.example.com/news3', ctime: '2024-09-01' },
-          { id: 4, title: '新闻标题4', url: 'https://www.example.com/news4', ctime: '2024-09-01' },
-          { id: 5, title: '新闻标题5', url: 'https://www.example.com/news5', ctime: '2024-09-01' },
-        ];
+    async getNewsData() {
+      try {
+        const response = await this.$api.getNews(); // 调用接口获取数据
+        if (response.data.code === 200) {
+          this.newsItems = response.data.result.newslist; // 将新闻列表存储到组件数据中
+        } else {
+          console.error('获取新闻数据失败');
+        }
+      } catch (error) {
+        console.error('获取新闻数据异常', error);
+      } finally {
         this.loading1 = false; // 数据加载完毕后，取消加载状态
-      }, 1000); // 模拟异步请求延时
+      }
     },
+    // //新闻接口调用上限时，使用一下代码
+    // getNewsData() {
+    //   setTimeout(() => { // 模拟异步请求
+    //     this.newsItems = [
+    //       { id: 1, title: '新闻标题1', url: 'https://www.example.com/news1', ctime: '2024-09-01' },
+    //       { id: 2, title: '新闻标题2', url: 'https://www.example.com/news2', ctime: '2024-09-01' },
+    //       { id: 3, title: '新闻标题3', url: 'https://www.example.com/news3', ctime: '2024-09-01' },
+    //       { id: 4, title: '新闻标题4', url: 'https://www.example.com/news4', ctime: '2024-09-01' },
+    //       { id: 5, title: '新闻标题5', url: 'https://www.example.com/news5', ctime: '2024-09-01' },
+    //     ];
+    //     this.loading1 = false; // 数据加载完毕后，取消加载状态
+    //   }, 1000); // 模拟异步请求延时
+    // },
     async getBilibili_NewsData() {
       try {
         const response = await this.$api.getBilibili_News(); // 调用接口获取数据
@@ -238,20 +238,39 @@ export default {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
+  padding: 20px;
+  gap: 20px;
 }
 /* 美化新闻列表 */
+/* 美化新闻列表 */
 .news {
-  flex-basis: calc(33.33% - 40px);
+  flex-basis: calc(33.33% - 20px); /* 新闻块的基础宽度，减去间隔的一半 */
   padding: 20px;
-  max-width: 500px;
+  max-width: calc(33.33% - 20px); /* 最大宽度同样减去间隔 */
+  height: auto;
   max-height: 400px;
-  margin: 3px;
+  margin: 0; /* 取消单独的 margin，改用 gap 控制间距 */
   font-family: Arial, sans-serif;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   border-radius: 10px;
   background: rgba(255, 255, 255, 0.7); /* 半透明背景 */
   animation: shake 0.5s;
   transition: box-shadow 0.3s ease; /* 添加过渡效果，使阴影变化更平滑 */
+  overflow: auto;
+  position: relative;
+  box-sizing: border-box; /* 包括 padding 和 border 在内的总宽度 */
+}
+.news::-webkit-scrollbar {
+  width: 0; /* 隐藏滚动条宽度 */
+  height: 0; /* 隐藏滚动条高度 */
+}
+
+.news::-webkit-scrollbar-thumb {
+  background-color: transparent; /* 隐藏滚动条的 thumb 部分 */
+}
+
+.news::-webkit-scrollbar-track {
+  background-color: transparent; /* 隐藏滚动条的 track 部分 */
 }
 
 .news:hover {
