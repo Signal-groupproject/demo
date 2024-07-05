@@ -1,6 +1,20 @@
 <template>
   <div class="city-guide">
     <h1>重庆旅游攻略</h1>
+    <!-- Bilibili 视频 -->
+    <section class="video-section">
+      <div class="video-container">
+        <iframe
+            src="//player.bilibili.com/player.html?isOutside=true&aid=309710724&bvid=BV1UA41127wW&cid=1017755060&p=1"
+            scrolling="no"
+            border="0"
+            frameborder="no"
+            framespacing="0"
+            allowfullscreen="true"
+            class="video-iframe"
+        ></iframe>
+      </div>
+    </section>
 
     <!-- 重庆概述 -->
     <section class="section">
@@ -168,5 +182,26 @@ img {
 
 p {
   line-height: 1.6;
+}
+.video-section {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.video-container {
+  position: relative;
+  width: 100%;
+  max-width: 800px;
+  padding-top: 56.25%; /* 16:9 aspect ratio */
+}
+
+.video-iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
 }
 </style>

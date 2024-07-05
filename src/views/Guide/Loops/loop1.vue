@@ -1,7 +1,20 @@
 <template>
   <div class="city-guide">
     <h1>大理旅游攻略</h1>
-
+    <!-- Bilibili 视频 -->
+    <section class="video-section">
+      <div class="video-container">
+        <iframe
+            src="//player.bilibili.com/player.html?isOutside=true&aid=256396341&bvid=BV1NY411c714&cid=716980078&p=1"
+            scrolling="no"
+            border="0"
+            frameborder="no"
+            framespacing="0"
+            allowfullscreen="true"
+            class="video-iframe"
+        ></iframe>
+      </div>
+    </section>
     <!-- 大理概述 -->
     <section class="section">
       <h2>大理概述</h2>
@@ -169,4 +182,27 @@ img {
 p {
   line-height: 1.6;
 }
+
+.video-section {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.video-container {
+  position: relative;
+  width: 100%;
+  max-width: 800px;
+  padding-top: 56.25%; /* 16:9 aspect ratio */
+}
+
+.video-iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
 </style>
+
