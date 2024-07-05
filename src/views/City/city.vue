@@ -37,7 +37,6 @@
           </div>
         </div>
         <div class="footer">
-          <p>Footer content here</p>
         </div>
       </div>
     </div>
@@ -132,6 +131,19 @@ function delayedClearSearch() {
   overflow-y: auto; /* 如果内容溢出，显示滚动条 */
 }
 
+.sidebar::-webkit-scrollbar {
+  width: 0; /* 隐藏滚动条宽度 */
+  height: 0; /* 隐藏滚动条高度 */
+}
+
+.sidebar::-webkit-scrollbar-thumb {
+  background-color: transparent; /* 隐藏滚动条的 thumb 部分 */
+}
+
+.sidebar::-webkit-scrollbar-track {
+  background-color: transparent; /* 隐藏滚动条的 track 部分 */
+}
+
 .sidebar-item {
   margin-bottom: 10px;
   cursor: pointer;
@@ -216,10 +228,9 @@ function delayedClearSearch() {
 }
 
 .footer {
-  background-color: #f0f0f0;
+  background-color: #ffffff;
   padding: 20px;
   text-align: center;
   margin-top: 20px;
-  border-top: 1px solid #ccc;
 }
 </style>

@@ -63,26 +63,31 @@ const routes = [
         path: '/',
         name: 'Home',
         component: Home,
+        meta: { title: '主页' },
       },
       {
         path: '/news',
         name: 'News',
         component: () => import('../views/Tools/News.vue'),
+        meta: { title: '新闻' },
       },
       {
         path: '/map',
         name: 'Maps',
         component: () => import('../views/Tools/Map.vue'),
+        meta: { title: '地图' },
       },
       {
         path: '/spots',
         name: 'Spots',
         component: () => import('../views/Tools/Spots.vue'),
+        meta: { title: '旅游景点' },
       },
       {
         path: '/ai',
         name: 'Ai',
         component: () => import('../views/Tools/Ai.vue'),
+        meta: { title: 'AI' },
       },
       {
         path: '/travel',
@@ -468,6 +473,13 @@ const routes = [
 
 const router = new VueRouter({
   routes,
+});
+router.beforeEach((to, from, next) => {
+  // 检查路由是否有 meta 字段
+  if (to.meta.title) {
+    document.title = to.meta.title;
+  }
+  next();
 });
 
 export default router;
