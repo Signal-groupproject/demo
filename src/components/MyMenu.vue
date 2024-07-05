@@ -13,9 +13,10 @@
         <template #title>
           <span>工具</span>
         </template>
-        <el-menu-item index="/news">文旅新闻</el-menu-item>
+        <el-menu-item index="/news">新闻</el-menu-item>
         <el-menu-item index="/map">地图搜索</el-menu-item>
-        <el-menu-item index="/spots">旅游</el-menu-item>
+        <el-menu-item index="/spots">旅游景区</el-menu-item>
+        <el-menu-item index="/ai">AI Chat</el-menu-item>
       </el-submenu>
 
       <el-submenu index="/guide">
@@ -33,6 +34,24 @@
         <el-menu-item index="/travel/attractions">热门景点</el-menu-item>
         <el-menu-item index="/travel/food">美食介绍</el-menu-item>
       </el-submenu>
+
+      <el-submenu index="/city">
+        <template slot="title">城市介绍</template>
+        <el-menu-item index="/city/city">总览</el-menu-item>
+        <el-menu-item index="/city/shanghai">上海</el-menu-item>
+        <el-menu-item index="/city/beijing">北京</el-menu-item>
+        <el-menu-item index="/city/fujian">福建</el-menu-item>
+        <el-menu-item index="/city/hainan">海南</el-menu-item>
+        <el-menu-item index="/city/hangzhou">杭州</el-menu-item>
+        <el-menu-item index="/city/guangzhou">广州</el-menu-item>
+        <el-menu-item index="/city/wuhan">武汉</el-menu-item>
+        <el-menu-item index="/city/changsha">长沙</el-menu-item>
+        <el-menu-item index="/city/liaoning">辽宁</el-menu-item>
+        <el-menu-item index="/city/xinjiang">新疆</el-menu-item>
+        <el-menu-item index="/city/xizang">西藏</el-menu-item>
+        <el-menu-item index="/city/guangdong">广东</el-menu-item>
+      </el-submenu>
+
     </el-menu>
   </div>
 </template>

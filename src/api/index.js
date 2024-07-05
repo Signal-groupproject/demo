@@ -14,11 +14,23 @@ const api = {
     getNews() {
         return axios.get(base.news)
     },
+    getBilibili_News() {
+        return axios.get(base.bilibili_news)
+    },
+    getZhihu_News() {
+        return axios.get(base.zhihu_news)
+    },
+    getBaidu_News() {
+        return axios.get(base.baidu_news)
+    },
+    getWeibo_News() {
+        return axios.get(base.weibo_news)
+    },
+    getTodays_News() {
+        return axios.get(base.todays_news)
+    },
     getRandomImage(){
         return axios.get(base.randomImage)
-    },
-    getLocation(){
-        return axios.get(base.location)
     }
 }
 

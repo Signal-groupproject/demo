@@ -61,9 +61,6 @@
         <div class="footer-left">
           <h3>关于我们</h3>
         </div>
-        <div class="footer-center">
-          <p>  1234567890 |  示例地址</p>
-        </div>
         <div class="footer-right">
           <ul>
             <li>
@@ -92,9 +89,9 @@
         <div class="footer-column-center">
           <h3>旅游FAQ</h3>
           <ul>
-            <li @click="showAnswer('FAQ1')">FAQ1</li>
-            <li @click="showAnswer('FAQ2')">FAQ2</li>
-            <li @click="showAnswer('FAQ3')">FAQ3</li>
+            <li @click="showAnswer('FAQ1')">如何选择旅游目的地？</li>
+            <li @click="showAnswer('FAQ2')">旅游时需准备的文件？</li>
+            <li @click="showAnswer('FAQ3')">旅行时如何安排住宿？</li>
           </ul>
         </div>
 
